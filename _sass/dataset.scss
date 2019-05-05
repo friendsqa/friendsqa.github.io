@@ -1,0 +1,61 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+table#overview th, td {
+  border: 1px solid #d9dbdd;
+  padding: 0.85em 1em;
+}
+
+.stats-field {
+  float: left;
+  width: 30%;
+}
+
+.stats-field #stats-questions, .stats-field #stats-episodes {
+  padding: 0.8em 0.6em;
+  border: 0.05em solid #d9dbdd;
+  text-align: left;
+
+  span#header{
+    font-weight: bold;
+    line-height: 1.5em;
+  }
+}
+
+.stats-field #stats-usage {
+  margin-top: 2em;
+  border: 0.05em solid #d9dbdd;
+  text-align: left;
+
+  span#header {
+    color: #7ca8ef;
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+  span#underline {
+    text-decoration: underline;
+  }
+  p {
+    margin: 0.5em;;
+    font-size: 0.7em;
+  }
+}
+
+.stats-field ul {
+  margin: 0.1em;
+  list-style-type: bullet;
+  font-size: 0.9em;
+}
+
+.video-field {
+  float: right;
+  width: 68%;
+}
+
+.question-field {
+  float: right;
+  width: 68%;
+}

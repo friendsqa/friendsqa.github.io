@@ -1,0 +1,26 @@
+<nav class="navbar">
+  <div class="logo-field">
+    <a href="/">FriendsQA</a>
+  </div>
+  <div class="navigation-field">
+  {% for item in site.data.menu %}
+    {% if item.child %}
+      <div class="dropdown">
+        <a class="dropbtn" {% if page.url == item.link %}class="current"{% endif %}> {{ item.name }}
+          <i class="fa fa-caret-down"></i>
+        </a>
+        <div class="dropdown-content">
+          {% for child in item.children %}
+            <a href="{{ child.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ child.name }}</a>
+          {% endfor %}
+        </div>
+      </div>
+    {% else %}
+      <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>
+          {{ item.name  }}
+      </a>
+    {% endif %}
+  {% endfor %}
+  </div>
+</nav>
+

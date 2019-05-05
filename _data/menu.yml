@@ -1,0 +1,36 @@
+- name: About
+  child: false
+  link: /
+- name: Paper
+  child: false
+  link: /
+- name: People
+  child: false
+  link: /
+- name: Dataset
+  child: true
+  children : 
+  - name: Overview
+    link: /dataset/overview
+  - name: Explore
+    link: /dataset/explore
+  - name: Download
+    link: /dataset/download
+  - name: Code
+    link: https://github.com/videoturingtest
+- name: Challenge
+  child: true
+  children :
+    - name: 2019
+      link: /challenge/2019
+- name: Workshop
+  child: true
+  children: 
+  - name: 2019
+    link : /workshop/2019
+- name: Sponsor
+  child: false
+  link: /sponsor
+- name: Contact
+  child: false
+  link: /contact
