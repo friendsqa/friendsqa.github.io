@@ -15,6 +15,14 @@
 }
 
 // Explore page
+.explore {
+  @media (min-width: 500px) and (max-width: 1024px) {
+    font-size: 0.8em;
+    width: 100%;
+    padding: 0;
+  }
+}
+
 .explore .content-item {
   overflow: hidden;
 }
@@ -259,6 +267,7 @@ input.localized_slider:focus::-ms-fill-upper {
       margin: 0 1em;
     }
   }
+
 }
 
 .button-field button {
