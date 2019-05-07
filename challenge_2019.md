@@ -1,10 +1,13 @@
 ---
 layout: default
-title: Challenge
+title: Challenge - 2019
 permalink: /challenge/2019/
 ---
 
-<div class="challege content-container">
+<link rel="stylesheet" href="/assets/css/member.css">
+<link rel="stylesheet" href="/assets/css/challenge.css">
+
+<div class="challenge content-container">
   <h1 class = "content-title">
     Challenge
   </h1>
@@ -24,11 +27,11 @@ permalink: /challenge/2019/
     <div class="content-item">
       <table> 
         <tr>
-          <td>Jun 20, 2019</td>
+          <th>Jun 20, 2019</th>
           <td>Challenge launched</td>
         </tr>
         <tr>
-          <td>Nov 02, 2019</td>
+          <th>Nov 02, 2019</th>
           <td>Winner's announcement at the Workshop, ICCV 2019</td>
         </tr>
       </table>
@@ -58,9 +61,9 @@ permalink: /challenge/2019/
       5. Challenge Guidelines
     </h2>
     <p class="content-item">
-      1. ...
-      2. ...
-      3. ...
+      1. ...<br>
+      2. ...<br>
+      3. ...<br>
     </p>
   </div>
 
@@ -69,7 +72,7 @@ permalink: /challenge/2019/
       6. Organizers
     </h2>
     <div class="content-item">
-      {% for person in site.data.people %}
+      {% for person in site.data.challengeOrganizers2019 %}
         <div class="member">
           <div class="member-profile">
             <img class="member-profile" src="{{person.src}}">

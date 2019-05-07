@@ -1,9 +1,10 @@
 ---
 layout: default
-title: Dataset
+title: Dataset - Overview
 permalink: /dataset/overview
 ---
-{% include datasetHeader.html %}
+
+<link rel="stylesheet" href="/assets/css/dataset.css">
 
 <div class="overview content-container">
   <h1 class = "content-title">

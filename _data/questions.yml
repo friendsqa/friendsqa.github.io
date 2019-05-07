@@ -1,0 +1,25 @@
+- question: What room was Wilson breaking into when House found him?
+  answer: 1 
+  answers: 
+    - answer: The bedroom.
+    - answer: The bathroom.
+    - answer: The living room.
+    - answer: The kitchen.
+    - answer: The dining room.
+
+- question: What is Ross's occupation?
+  answer: 2
+  answers: 
+    - answer: Anthropologist.
+    - answer: Archaeologist.
+    - answer: Paleontologist.
+    - answer: Fossilologist.
+
+- question: Ross and Chandler are alumni of ;
+  answer: 3
+  answers: 
+    - answer: New York University.
+    - answer: City University of New York.
+    - answer: Fordham University.
+    - answer: Columbia University.
+    - answer: Pace University.

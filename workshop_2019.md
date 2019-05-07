@@ -1,8 +1,11 @@
 ---
 layout: default
-title: Workshop
+title: Workshop - 2019
 permalink: /workshop/2019/
 ---
+
+<link rel="stylesheet" href="/assets/css/member.css">
+<link rel="stylesheet" href="/assets/css/workshop.css">
 
 <div class="workshop content-container">
   <h1 class = "content-title">
@@ -48,7 +51,7 @@ permalink: /workshop/2019/
       3. Invited Speakers
     </h2>
     <div class="content-item">
-      {% for person in site.data.people %}
+      {% for person in site.data.workshopInvitedSpeakers2019 %}
         <div class="member">
           <div class="member-profile">
             <img class="member-profile" src="{{person.src}}">
@@ -69,7 +72,7 @@ permalink: /workshop/2019/
       4. Organizers
     </h2>
     <div class="content-item">
-      {% for person in site.data.people %}
+      {% for person in site.data.workshopOrganizers2019 %}
         <div class="member">
           <div class="member-profile">
             <img class="member-profile" src="{{person.src}}">

@@ -1,13 +1,18 @@
 html {
   min-height: 100%;
+  overflow-x: hidden;
 }
 
 body {
-  overflow-x: hidden;
+  font-family: Helvetica;
   margin: 0;
   padding: 0;
   width: 100%;
   min-height: 100%;
+}
+
+button {
+  outline: none;
 }
 
 .container {
@@ -45,34 +50,44 @@ body {
 
 .content-container {
   position: relative;
+  text-align: center;
   width: 100%;
   margin: 1em 0 1em 0;
-}
-
-.content-container p.content-item {
-  text-align: center;
   width: 60%;
   padding: 0 20%;
   line-height: 1.5em;
 }
 
-.content-container div.content-item {
-  text-align: center;
-  width: 60%;
-  padding: 0 20%;
-}
-
-.content-title {
+h1.content-title {
   font-size: 2em;
   text-align: center;
+  margin: 2em 0;
 }
 
-.content-title:after {
+h1.content-title:after {
   content: "";
   display: block;
   border-bottom: 0.15em solid #3399ff;
   width: 2.5em;
   margin: 0.1em auto;
+}
+
+.content-subcontainer {
+  margin-bottom: 5em;
+}
+
+.content-subcontainer h2.content-subtitle {
+  text-align: left; 
+}
+
+.content-subcontainer .content-item {
+  text-align: left; 
+
+  a#download_link {
+    text-decoration: none;
+    font-weight: bold;
+    color: #3399ff;
+  }
 }
 
 footer {

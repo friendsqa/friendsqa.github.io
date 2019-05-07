@@ -1,10 +1,11 @@
 ---
 layout: default
-title : Explore
+title : Dataset - Explore
 permalink: /dataset/explore
 ---
 
-{% include datasetHeader.html %}
+<link rel="stylesheet" href="/assets/css/dataset.css">
+<script src = "/assets/js/explore.js" type = "text/javascript"/></script>
 
 <div class="explore content-container">
   <h1 class = "content-title">
@@ -59,29 +60,51 @@ best viewed in Chrome.
     </div>
 
     <div class="video-field">
-      <video width="100%" height="auto" controls>
-        <src src="/assets/images/dataset-explore.mp4" type="video/mp4">
+      <video class="viewer" width="100%" height="auto" controls>
+        <source src="/assets/images/explore.mp4" type="video/mp4">
       </video>
+
+      <div class="play_controls"> 
+        <input type="range" class="localized_slider" value="1"> 
+        <button class="localized_button" title="Toggle Play">►  Play Localized</button> 
+      </div> 
+
     </div>
 
-    <div class="question-field">
-      <table>
-        <tr>
-          <th>
-            Question
-          </th>
-          <td>
-            What room was Wilson breaking into when House found him?
-          </td>
-        </tr>
-        <tr>
-          <th>
-            Answer 0
-          </th>
-          <td>
-            The bedroom.
-          </td>
-        </tr>
-      </table>
-  </div>
+    {% for data in site.data.questions %}
+    {% assign parentNum = forloop.index0 %}
+    {% assign answerNum = data.answer %}
+    <div class="questions question-{{ forloop.index0 }}">
+      <div class="question-field">
+        <table>
+            <tr id="question">
+              <th>
+                Question 
+              </th>
+              <td>
+                {{ data.question }}
+              </td>
+            </tr>
+            {% for answerList in data.answers %}
+            <tr id="answer-{{ forloop.index0 }}">
+              <th>
+                  Answer {{ forloop.index0 }}
+              </th>
+              <td>
+                {{ answerList.answer }}
+              </td>
+            </tr>
+            {% endfor %}
+        </table>
+      </div>
+      <div class="button-field">
+          <button id="showAnswer" onclick="showAnswer('{{ parentNum }}', '{{ answerNum }}')">Show Answer</button>
+          <div id="qControl-field">
+            <button id="prev" onclick="prevQuestion()">Prev example</button>
+            <span id="qIndex"> {{ forloop.index }} / {{ forloop.length }}</span>
+            <button id="next" onclick="nextQuestion()">Next example</button>
+          </div>
+      </div>
+    </div>
+    {% endfor %}
 </div>

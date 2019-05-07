@@ -1,0 +1,16 @@
+- type: Government
+  images: 
+    - src: "/assets/images/sponsors/nsf.png"
+    - src: "/assets/images/sponsors/onr.png"
+    - src: "/assets/images/sponsors/arl.png"
+    - src: "/assets/images/sponsors/aro.png"
+
+- type: Industry
+  images: 
+    - src: "/assets/images/sponsors/google_faculty_research_awards.png"
+    - src: "/assets/images/sponsors/amazon_web.png"
+    - src: "/assets/images/sponsors/window_azure.png"
+    - src: "/assets/images/sponsors/nvidia.png"
+    - src: "/assets/images/sponsors/google_summer_code.png"
+    - src: "/assets/images/sponsors/facebook.png"
+    - src: "/assets/images/sponsors/google.png"

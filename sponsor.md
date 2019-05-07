@@ -4,25 +4,23 @@ title: Sponsor
 permalink: /sponsor
 ---
 
+<link rel="stylesheet" href="/assets/css/sponsor.css">
+
 <div class="sponsor content-container">
   <h1 class = "content-title">
     Sponsor
   </h1>
-  <div class = "content-subcontainer">
-    <h2 class = "content-subtitle">
-      Government
-    </h2>
-    <div class="content-item">
-      <img src="/assets/images/sponsor1.png">
-    </div>
-  </div>
 
+  {% for sponsor in site.data.sponsors %}
   <div class = "content-subcontainer">
     <h2 class = "content-subtitle">
-      Industry
+      {{ sponsor.type }}
     </h2>
     <div class="content-item">
-      <img src="/assets/images/sponsor2.png">
+      {% for img in sponsor.images %}
+        <img src="{{ img.src }}">
+      {% endfor %}
     </div>
   </div>
+  {% endfor %}
 </div>

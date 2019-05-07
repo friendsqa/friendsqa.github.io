@@ -2,7 +2,9 @@
 layout: default
 title: FriensQA
 ---
-{% include indexHeader.html %}
+
+<link rel="stylesheet" href="/assets/css/member.css">
+<script src = "/assets/js/script.js" type = "text/javascript"/></script>
 
 <div class="about content-container">
   <h1 class = "content-title">

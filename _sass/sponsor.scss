@@ -1,0 +1,20 @@
+.sponsor .content-subcontainer {
+  border-bottom: 0.1em solid #dee0e2;
+
+  h2 {
+    color: #cccccc;
+    font-weight: normal;
+    text-align: center;
+  }
+
+  .content-item  {
+    text-align: center;
+    img {
+      margin: 0.5em 1em;
+      width: auto;
+      height: 6em;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
