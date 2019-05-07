@@ -18,19 +18,19 @@ permalink: /dataset/overview
         <th>Test set</th>
       </tr>
       <tr>
-        <td>Content</td>
-        <td>Content</td>
-        <td>Content</td>
+        <td>training 0</td>
+        <td>validation 0</td>
+        <td>test 0</td>
       </tr>
       <tr>
-        <td>Content</td>
-        <td>Content</td>
-        <td>Content</td>
+        <td>training 1</td>
+        <td>validation 1</td>
+        <td>test 1</td>
       </tr>
       <tr>
-        <td>Content</td>
-        <td>Content</td>
-        <td>Content</td>
+        <td>training 2</td>
+        <td>validation 2</td>
+        <td>test 2</td>
       </tr>
     </table>
   </div>
