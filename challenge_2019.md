@@ -43,7 +43,8 @@ permalink: /challenge/2019/
       3. Evaluation
     </h2>
     <p class="content-item">
-      Evaluation server link :
+      Evaluation server link : 
+        <a id="download_link" href="">linklinklink</a>
     </p>
   </div>
 
@@ -61,9 +62,9 @@ permalink: /challenge/2019/
       5. Challenge Guidelines
     </h2>
     <p class="content-item">
-      1. ...<br>
-      2. ...<br>
-      3. ...<br>
+      1. ... <br>
+      2. ... <br>
+      3. ... <br>
     </p>
   </div>
 
