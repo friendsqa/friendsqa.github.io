@@ -4,6 +4,7 @@ title: FriensQA
 ---
 
 <link rel="stylesheet" href="/assets/css/member.css">
+<link rel="stylesheet" href="/assets/css/index.css">
 <script src = "/assets/js/script.js" type = "text/javascript"/></script>
 
 <div class="about content-container">
@@ -20,7 +21,12 @@ title: FriensQA
     Paper
   </h1>
   <p class="content-item">
-  FriendsQA: is a large-scale video QA dataset based on 6 popular
+  FriendsQA: is a large-scale video QA dataset based on 6 popular <br>
+  <span id="authors">Seong-Ho Choi, Kyoung-Woon On, Byoung-Tak Zhang.</span>
+  </p>
+  <p class="content-item">
+  FriendsQA: is a large-scale video QA dataset based on 6 popular <br>
+  <span id="authors">Seong-Ho Choi, Kyoung-Woon On, Byoung-Tak Zhang.</span>
   </p>
 </div>
 
