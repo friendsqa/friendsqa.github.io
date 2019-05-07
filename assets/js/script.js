@@ -1,19 +1,5 @@
-function About() {
-  var target = document.getElementsByClassName("about");
-  var offset = target[0].offsetTop - 10;
-
-  window.scroll(0, offset);
-}
-
-function Paper() {
-  var target = document.getElementsByClassName("papers");
-  var offset = target[0].offsetTop - 10;
-
-  window.scroll(0, offset);
-}
-
-function People() {
-  var target = document.getElementsByClassName("people");
+function moveTo(n) {
+  var target = document.getElementsByClassName(n.toLowerCase());
   var offset = target[0].offsetTop - 10;
 
   window.scroll(0, offset);

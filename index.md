@@ -16,7 +16,7 @@ title: FriensQA
   </p>
 </div>
 
-<div class="papers content-container">
+<div class="paper content-container">
   <h1 class = "content-title">
     Paper
   </h1>

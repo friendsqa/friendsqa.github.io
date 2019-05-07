@@ -16,7 +16,7 @@
         </div>
       </div>
     {% else %}
-    <a {% if page.url != item.link %}href="{{ item.link }}"{% endif %} {% if item.name=="About" or item.name=="Paper" or item.name=="People" %}onclick="{{item.name}}()"{% endif %}>
+    <a {% if page.url != item.link %}href="{{ item.link }}"{% endif %} {% if page.url == "/" %}onclick="moveTo('{{item.name}}')"{% endif %}>
           {{ item.name  }}
       </a>
     {% endif %}
