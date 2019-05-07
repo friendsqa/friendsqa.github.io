@@ -16,10 +16,13 @@
 
 // Explore page
 .explore {
-  @media (min-width: 500px) and (max-width: 1024px) {
+  @media (min-width: 520px) and (max-width: 1024px) {
     font-size: 0.8em;
     width: 100%;
     padding: 0;
+  }
+  @media screen and (max-width: 520px) {
+    font-size: 0.3em;
   }
 }
 
@@ -253,6 +256,7 @@ input.localized_slider:focus::-ms-fill-upper {
   td {
     padding: 0.8em 0;
   }
+
 }
 
 .button-field {
