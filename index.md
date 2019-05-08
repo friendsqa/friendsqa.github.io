@@ -7,6 +7,14 @@ title: FriensQA
 <link rel="stylesheet" href="/assets/css/index.css">
 <script src = "/assets/js/script.js" type = "text/javascript"/></script>
 
+<div class="bk-container">
+  <img class="bk-img" src="/assets/images/main.png">
+  <h1 class="bk-header">
+    FriendsQA for Video Story Understanding
+  </h1>
+</div>
+
+
 <div class="about content-container">
   <h1 class = "content-title">
     What is FriendsQA?
