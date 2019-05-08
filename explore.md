@@ -50,55 +50,58 @@ permalink: /dataset/explore
           </li>
         </ul>
       </div>
-      <div id="stats-usage">
-        <span id="header"> Usage </span>
-        <p>
-        Click the <span id="underline">Play Localized</span> button to play the video clip specified by the timestamp annotation. The video come with subtitle, turn it on if you did not see it.\n
-best viewed in Chrome.
+    </div>
+
+    {% for example in site.data.questions %}
+    <div class = "examples example-{{example.number}}">
+      <div class="video-field">
+        <video class="viewer" width="100%" height="auto">
+          <source src="{{ example.src }}" type="video/{{ example.type }}">
+        </video>
+
+        <div class="video-play-controls"> 
+          <input type="range" class="video-slider" value="1"> 
+        </div> 
+
+        <p class="video-description">
+          {{ example.description }}
         </p>
+
+        {% for rtd in example.realTimeDescription %}
+          <p class="video-realtime-description realTimeDescription-{{forloop.index0}}">
+            {{ rtd.content }}
+          </p>
+        {% endfor %}
       </div>
-    </div>
+      
+      {% for e in example.questions %}
+      {% assign parentNum = forloop.index0 %}
+      {% assign answerNum = e.answer %}
+        <div class="question-field question-{{ forloop.index0 }}">
+            <div class="question-header">
+              Question Level {{ forloop.index }}
+            </div>
+            <div class="question-txt">
+              <div class="q">
+                <span id="qq">Question</span>
+                {{ e.question }}
+              </div>
+              <div class="o">
+                {% for o in e.options %}
+                  <div class="o-{{forloop.index0}}">
+                    <span id="oo"> Answer {{forloop.index0}} </span>{{ o.option }}
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+            <div class="question-btn">
+              <button id="showAnswer" onclick="showAnswer('{{ example.number }}', '{{ parentNum }}', '{{ answerNum }}')">Show Answer</button>
+              <button class="localized_button" title="Toggle Play">►  Play shot</button> 
+            </div>
+        </div>
+      {% endfor %}
 
-    <div class="video-field">
-      <video class="viewer" width="100%" height="auto" controls>
-        <source src="/assets/images/explore.mp4" type="video/mp4">
-      </video>
-
-      <div class="play_controls"> 
-        <input type="range" class="localized_slider" value="1"> 
-        <button class="localized_button" title="Toggle Play">►  Play Localized</button> 
-      </div> 
-
-    </div>
-
-    {% for data in site.data.questions %}
-    {% assign parentNum = forloop.index0 %}
-    {% assign answerNum = data.answer %}
-    <div class="questions question-{{ forloop.index0 }}">
-      <div class="question-field">
-        <table>
-            <tr id="question">
-              <th>
-                Question 
-              </th>
-              <td>
-                {{ data.question }}
-              </td>
-            </tr>
-            {% for answerList in data.answers %}
-            <tr id="answer-{{ forloop.index0 }}">
-              <th>
-                  Answer {{ forloop.index0 }}
-              </th>
-              <td>
-                {{ answerList.answer }}
-              </td>
-            </tr>
-            {% endfor %}
-        </table>
-      </div>
       <div class="button-field">
-          <button id="showAnswer" onclick="showAnswer('{{ parentNum }}', '{{ answerNum }}')">Show Answer</button>
           <div id="qControl-field">
             <button id="prev" onclick="prevQuestion()">Prev example</button>
             <span id="qIndex"> {{ forloop.index }} / {{ forloop.length }}</span>

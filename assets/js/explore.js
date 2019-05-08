@@ -1,14 +1,25 @@
 var play = false;
-var questionNum = 0;
-var questionBoxes = document.getElementsByClassName("questions");
+var exampleNum = 0;
 
-window.onload = function() {
+$(document).ready(function() {
+  var exampleBoxes = $("div.explore").find("div.examples");
+  
+  /*** Init question field ***/
+  exampleBoxes[exampleNum].style.display = 'block';
+
+  var i;
+  for (i = 1; i < exampleBoxes.length; i++) {
+    exampleBoxes[i].style.display = 'none';
+  }
+  /***************************/
+
   /*** VIDEO CONTROLL ***/ 
+  /*
   var video = document.getElementsByClassName("viewer")[0]; 
   var slider = document.getElementsByClassName("localized_slider")[0];
   var btn = document.getElementsByClassName("localized_button")[0];
 
-  slider.value = 20;
+  //slider.value = 20;
 
   btn.addEventListener("click", function() {
     if (video.paused) {
@@ -45,51 +56,48 @@ window.onload = function() {
     var value = (100/video.duration) * video.currentTime;
     slider.value = value;
   });
+  */
   /**********************/
 
-  /*** Init question field ***/
-  questionBoxes[questionNum].style.display = 'block';
+});
 
-  var i;
-  for (i = 1; i < questionBoxes.length; i++) {
-    questionBoxes[i].style.display = 'none';
-  }
-  /***************************/
-}
-
-function showAnswer(p, a) {
+function showAnswer(e, p, a) {
   var parent= document.querySelector(".question-"+p);
   var answer = parent.querySelector("#answer-"+a);
   answer.style.color = "#ed1004";
 }
 
 function prevQuestion() {
-  if (questionNum != 0)
-    questionNum -= 1;
-  if (questionNum >= 0) {
+  var exampleBoxes = $("div.explore").find("div.examples");
+
+  if (exampleNum != 0)
+    exampleNum -= 1;
+  if (exampleNum >= 0) {
     var i;
-    for (i = 0; i < questionBoxes.length; i++) {
-      if (i == questionNum) {
-        questionBoxes[i].style.display='block';
+    for (i = 0; i < exampleBoxes.length; i++) {
+      if (i == exampleNum) {
+        exampleBoxes[i].style.display='block';
       }
       else {
-        questionBoxes[i].style.display='none';
+        exampleBoxes[i].style.display='none';
       }
     }
   }
 }
 
 function nextQuestion() {
-  if (questionNum != questionBoxes.length - 1)
-    questionNum += 1;
-  if (questionNum < questionBoxes.length) {
+  var exampleBoxes = $("div.explore").find("div.examples");
+
+  if (exampleNum != exampleBoxes.length - 1)
+    exampleNum += 1;
+  if (exampleNum < exampleBoxes.length) {
     var i;
-    for (i = 0; i < questionBoxes.length; i++) {
-      if (i == questionNum) {
-        questionBoxes[i].style.display='block';
+    for (i = 0; i < exampleBoxes.length; i++) {
+      if (i == exampleNum) {
+        exampleBoxes[i].style.display='block';
       }
       else {
-        questionBoxes[i].style.display='none';
+        exampleBoxes[i].style.display='none';
       }
     }
   }
