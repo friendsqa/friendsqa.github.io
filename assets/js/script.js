@@ -1,6 +1,6 @@
 function moveTo(n) {
-  var target = document.getElementsByClassName(n.toLowerCase());
-  var offset = target[0].offsetTop - 10;
-
-  window.scroll(0, offset);
+  var target = $("." + n.toLowerCase());
+  $('html, body').animate({
+    scrollTop: $(target).offset().top
+  }, 800, 'easeInOutSine');
 }
