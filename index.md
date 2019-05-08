@@ -5,6 +5,7 @@ title: FriensQA
 
 <link rel="stylesheet" href="/assets/css/member.css">
 <link rel="stylesheet" href="/assets/css/index.css">
+<script type="text/javascript" src="/assets/js/index.js"></script>
 
 <div class="bk-container">
   <img class="bk-img" src="/assets/images/main.png">
@@ -13,6 +14,21 @@ title: FriensQA
   </h1>
 </div>
 
+<div class="update content-container">
+  <h1 class = "content-title">
+    Updates
+  </h1>
+  {% for news in site.data.updates %}
+  <p class="content-item news news-{{ forloop.index0 }}">
+    <span id="date">{{ news.date }}</span>
+    {{ news.content }}
+  </p>
+  {% endfor %}
+  <p class="content-item showMore">
+    <span id="more" onclick="showMore()">More</span>
+<span id="noMoreContext" style="display:none;color: #cccccc;"><br>No more news available.</span>
+  </p>
+</div>
 
 <div class="about content-container">
   <h1 class = "content-title">

@@ -1,8 +1,19 @@
 # How to friendsqa.github.io
 
-### About | Paper | People
+### Update | About | Paper | People
 #### Source : index.md
-###### 1. About
+###### 1. Updates
+>위치 : **_data/updates.yml**
+>```
+> - date: {{ 날짜 }} 
+>  content: {{ 내용 입력 }}<a href="{{ 링크 }}">링크 표시 내용</a>{{ 내용 입력 }}  // 링크가 있는 경우
+
+> - date: {{ 날짜 }} 
+>  content: {{ 내용 입력 }} // 링크가 없는 경우
+>
+> ...
+>```
+###### 2. About
 >위치 : **index.md**
 > ```
 > <div class="about content-container">
@@ -15,7 +26,7 @@
 > </div>
 > ``` 
 
-###### 2. Paper
+###### 3. Paper
 >위치 : **index.md**
 > ```
 > <div class="papers content-container">
@@ -34,7 +45,7 @@
 ></div>
 > ``` 
 
-###### 3. People
+###### 4. People
 > 위치 : **_data/people.yml**
 > ``` 
 > - name: {{ 이름 }}
@@ -103,28 +114,24 @@
 >        </ul>
 >      </div>
 > ``` 
-###### 1.2. 왼쪽 하단 (Usage field)
->위치 : **explore.md**
+###### 1.2. 오른쪽 상단 (Video field)
+>위치 : ***_data/questions.yml*
 > ```
->      <div id="stats-usage">
->        <span id="header"> {{ 제목  }} </span>
->        <p>
->         {{ 내용 }}
->        </p>
->      </div>
+>- question: {{ 질문 }} 
+> src: {{ video 경로 }}
+> type: {{ video extension }}
+>  answer: {{ 정답 번호; 0... }}
+>  answers: 
+>    - answer: {{ 보기 0 }}
+>    - answer: {{ 보기 1 }}
+>    ...
 > ```
-###### 1.3. 오른쪽 상단 (Video field)
->위치 : **explore.md**
-> ```
->    <div class="video-field">
->      <video class="viewer" width="100%" height="auto" controls>
->        <source src="{{ video 경로 }}" type="video/{{ video 확장자 }}">
->      </video>
-> ```
-###### 1.4. 오른쪽 하단 (Question field)
+###### 1.3. 오른쪽 하단 (Question field)
 >위치 : **_data/questions.yml**
 > ```
 >- question: {{ 질문 }} 
+> src: {{ video 경로 }}
+> type: {{ video extension }}
 >  answer: {{ 정답 번호; 0... }}
 >  answers: 
 >    - answer: {{ 보기 0 }}

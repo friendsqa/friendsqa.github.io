@@ -5,12 +5,12 @@ $(document).ready(function(){
     // Modify dropdown 
     $(".dropdown-content").css("background-color", "white");
     $(".dropdown-content a").css("color", "black");
-  }
+  } 
 });
-
 
 $(window).scroll(function(e) { 
   var winLoc = $(window).scrollTop();
+  var pathname = window.location.pathname;
 
   if (winLoc > 0) {
     $("nav.navbar").css("background-color", "black");
@@ -19,9 +19,11 @@ $(window).scroll(function(e) {
     $(".dropdown-content a").css("color", "white");
   }
   else if (winLoc == 0){
-    $("nav.navbar").css("background-color", "transparent");
-    // Modify dropdown 
-    $(".dropdown-content").css("background-color", "white");
-    $(".dropdown-content a").css("color", "black");
+    if (pathname == "/") {
+      $("nav.navbar").css("background-color", "transparent");
+      // Modify dropdown 
+      $(".dropdown-content").css("background-color", "white");
+      $(".dropdown-content a").css("color", "black");
+    } 
   }
 });

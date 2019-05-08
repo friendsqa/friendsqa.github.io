@@ -1,11 +1,12 @@
 .bk-container {
   position: relative;
-  top: 3em; // navbar height
+  top: 0;
+
   clear: both;
 
   .bk-img {
     width: 100%;
-    height : 25em;
+    height: 23em;
   }
   .bk-header {
     color: white;
@@ -28,6 +29,34 @@
       font-size: 1.5em;
     }
   }
+}
+
+.update {
+  text-align: left;
+  line-height: 0.8em;
+
+  h1.content-title {
+    font-size: 1em;
+    text-align: left;
+    }
+  h1.content-title:after {
+    content: "";
+    display: none;
+  }
+
+  span#date { 
+    margin-right: 1em;
+    color: #870611;
+  }
+
+  .content-item a {
+    text-decoration: none;
+    color: #3399ff;
+  }
+}
+
+.update span#more {
+  color: #3399ff;  
 }
 
 .paper p.content-item {
