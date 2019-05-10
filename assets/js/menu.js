@@ -3,8 +3,8 @@ $(document).ready(function(){
   if (pathname == "/") {
     $("nav.navbar").css("background-color", "transparent");
     // Modify dropdown 
-    $(".dropdown-content").css("background-color", "white");
-    $(".dropdown-content a").css("color", "black");
+    //$(".dropdown-content").css("background-color", "white");
+    //$(".dropdown-content a").css("color", "black");
   } 
 });
 
@@ -22,8 +22,8 @@ $(window).scroll(function(e) {
     if (pathname == "/") {
       $("nav.navbar").css("background-color", "transparent");
       // Modify dropdown 
-      $(".dropdown-content").css("background-color", "white");
-      $(".dropdown-content a").css("color", "black");
+      //$(".dropdown-content").css("background-color", "white");
+      //$(".dropdown-content a").css("color", "black");
     } 
   }
 });
