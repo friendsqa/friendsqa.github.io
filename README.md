@@ -84,6 +84,7 @@
 ###### 1. Explore
 
 ###### 1.1. 왼쪽 상단 (Stats field)
+>위치 : **explore.md**
 > ```
 >    <div class="stats-field">
 >      <div id="stats-questions">
@@ -114,28 +115,66 @@
 >      </div>
 > ``` 
 ###### 1.2. 오른쪽 상단 (Video field)
->위치 : ***_data/questions.yml*
+>1.2.1. Real time description 시간 수정
+>위치 : **assets/js/explore.js**
 > ```
->- question: {{ 질문 }} 
-> src: {{ video 경로 }}
-> type: {{ video extension }}
->  answer: {{ 정답 번호; 0... }}
->  answers: 
->    - answer: {{ 보기 0 }}
->    - answer: {{ 보기 1 }}
+>var play = false;
+>var exampleNum = 0;
+>var rtdNum = 0;
+>var startTime = [0, 9, 16, 36, 40, 51]; // Real-time description 시작 표시 시간 수정
+>$(document).ready(function() {
+> ...
+> ```
+>1.2.2. Custom slider marker 수정
+>내용: 색상 및 시간(위치) 수정
+>위치 : **_sass/dataset.scss**
+> ```
+>.video-field .video-play-controls .marker-{{ Marker 번호 }} {
+>  background: {{ Marker 색상 }} 
+>  width: {{ Marker Duration }}
+>  left: {{ Marker 시작 시간(%) }};
+>}
+> ...
+> ```
+
+>내용: Marker handle 추가/삭제/수정
+>위치 : **explore.md**
+> ```
+>  <div class="video-play-controls"> 
+>    <input type="range" class="video-slider" value="0"> 
 >    ...
+>    <div class="video-marker marker-{{ Marker 번호 }}">
+>      <div class="marker-handle-left handle-left-{{ Marker 번호 }}">{{ Marker 시작 시간 }}</div>
+>      <div class="marker-handle-right handle-right-{{ Marker 번호 }}">{{ Marker 종료 시간 }}</div>
+>    </div>
+     ...>
+>  </div> 
 > ```
 ###### 1.3. 오른쪽 하단 (Question field)
 >위치 : **_data/questions.yml**
 > ```
->- question: {{ 질문 }} 
-> src: {{ video 경로 }}
-> type: {{ video extension }}
->  answer: {{ 정답 번호; 0... }}
->  answers: 
->    - answer: {{ 보기 0 }}
->    - answer: {{ 보기 1 }}
+>- number:{{ Example 번호 }}
+>  src: {{ 비디오 경로 }} 
+>  type: {{ 비디오 확장자 }}
+>  description: {{ STATIC Description }} 
+>  realTimeDescription: 
+>    - content : {{ REAL-TIME Description0 }} 
+>    - content : {{ REAL-TIME Description1 }} 
 >    ...
+>  questions:
+>    - question: {{ 질문0 }} 
+>      answer: {{ 정답 }}
+>      options: 
+>        - option: {{ 보기0 }} 
+>        - option: {{ 보기1 }} 
+>         ...
+>    - question: {{ 질문1 }} 
+>      answer: {{ 정답 }}
+>      options: 
+>        - option: {{ 보기0 }} 
+>        - option: {{ 보기1 }} 
+>         ...
+>      ...
 > ```
 
 ***

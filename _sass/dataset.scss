@@ -75,17 +75,92 @@
 }
 
 .video-field .video-play-controls {
-  width: 100%;
+  width: 96%;
+  height: auto;
+  position: relative;
+  top: 1.5em;
+  left: 2%;
+
+  text-align: left;
+  margin-bottom: 3.5em;
 }
 
 .video-field .video-play-controls input.video-slider {
   width: 100%;
   height: 3em;
-  float: left;
 
   -webkit-appearance: none;
   background: transparent;
-  margin-bottom: 1em;
+}
+
+.video-field .video-play-controls .video-marker {
+  margin: 0;
+
+  display: inline-block;
+  border: none;
+  height: 2.1em;
+  border-radius: 0.3em;
+
+  position: absolute;
+  top: 0;
+
+  .marker-handle-left, .marker-handle-right {
+    background: transparent;
+    border: 0.1em solid #cccccc;
+    border-radius: 0.3em;
+    color: #cccccc;
+    font-size: 0.76em;
+
+    padding: 0em 0.3em;
+    min-width: 2em;
+
+    position: absolute;
+  }
+
+  .marker-handle-left {
+    top: -2em;
+    left: -2em;
+  }
+  
+  .marker-handle-right {
+    top: 3em;
+    left: 85%;
+  }
+}
+
+.video-field .video-play-controls .marker-0 {
+  background: #ff6347;
+  width: 3%;
+  left: 5%;
+}
+
+.video-field .video-play-controls .marker-1 {
+  background: #ffd700;
+  width: 3%;
+  left: 10%;
+}
+
+.video-field .video-play-controls .marker-2 {
+  background: #9acd32;
+  width: 3%;
+  left: 15%;
+}
+
+.video-field .video-play-controls .marker-3 {
+  background: #cd853f;
+  width: 3%;
+  left: 20%;
+}
+
+.video-field .video-play-controls .marker-4 {
+  background: #da70d6;
+  width: 3%;
+  left: 25%;
+}
+
+p.video-description, p.video-reltime-description {
+  margin-top: 1em;
+  display: block;
 }
 
 /*** Hide default slider ***/
@@ -98,7 +173,6 @@
 }
 
 .video-field .video-play-controls input.video-slider::-ms-track {
-  cursor: pointer;
   background: transparent;
   border-color: transparent;
   color: transparent;
@@ -110,12 +184,11 @@ input.video-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
 
   border: none;
-
   height: 3em;
   width: 1em;
   border-radius: 0.3em;
-  background: #cccccc;
-  cursor: pointer;
+  //background: #cccccc;
+  background: transparent;
   margin-top: -0.2em; 
 }
 
@@ -124,8 +197,8 @@ input.video-slider::-moz-range-thumb {
   height: 3em;
   width: 1em;
   border-radius: 0.3em;
-  background: #cccccc;
-  cursor: pointer;
+  //background: #cccccc;
+  background: transparent;
 }
 
 input.video-slider::-ms-thumb {
@@ -133,8 +206,8 @@ input.video-slider::-ms-thumb {
   height: 3em;
   width: 1em;
   border-radius: 0.3em;
-  background: #cccccc; 
-  cursor: pointer;
+  //background: #cccccc; 
+  background: transparent;
 }
 /**************************/
 
@@ -146,7 +219,6 @@ input[type="range"] {
 input.video-slider::-webkit-slider-runnable-track {
   width: 100%;
   height: 2.8em;
-  cursor: pointer;
   border: 0.1em solid #cccccc;
   border-radius: 0.3em;
 }
@@ -158,7 +230,6 @@ input.video-slider:focus::-webkit-slider-runnable-track {
 input.video-slider::-moz-range-track {
   width: 100%;
   height: 2.8em;
-  cursor: pointer;
   border-radius: 0.3em;
   border: 0.1em solid #cccccc;
 }
@@ -166,7 +237,6 @@ input.video-slider::-moz-range-track {
 input.video-slider::-ms-track {
   width: 100%;
   height: 2.8em;
-  cursor: pointer;
   border: 0.1em solid #cccccc;
   background: transparent;
   color: transparent;
@@ -262,7 +332,6 @@ input.video-slider:focus::-ms-fill-upper {
   color: white;
   border: none;
 }
-
 
 .button-field {
   float: right;

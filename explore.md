@@ -55,12 +55,32 @@ permalink: /dataset/explore
     {% for example in site.data.questions %}
     <div class = "examples example-{{example.number}}">
       <div class="video-field">
-        <video class="viewer" width="100%" height="auto">
+        <video class="viewer viewer-{{example.number}}" width="100%" height="auto" ontimeupdate="videoSync()" controls>
           <source src="{{ example.src }}" type="video/{{ example.type }}">
         </video>
 
         <div class="video-play-controls"> 
-          <input type="range" class="video-slider" value="1"> 
+          <input type="range" class="video-slider" value="0"> 
+          <div class="video-marker marker-0">
+            <div class="marker-handle-left handle-left-0">0:05</div>
+            <div class="marker-handle-right handle-right-0">0:08</div>
+          </div>
+          <div class="video-marker marker-1">
+            <div class="marker-handle-left handle-left-1">0:10</div>
+            <div class="marker-handle-right handle-right-1">0:13</div>
+          </div>
+          <div class="video-marker marker-2">
+            <div class="marker-handle-left handle-left-2">0:15</div>
+            <div class="marker-handle-right handle-right-2">0:18</div>
+          </div>
+          <div class="video-marker marker-3">
+            <div class="marker-handle-left handle-left-3">0:20</div>
+            <div class="marker-handle-right handle-right-3">0:23</div>
+          </div>
+          <div class="video-marker marker-4">
+            <div class="marker-handle-left handle-left-4">0:25</div>
+            <div class="marker-handle-right handle-right-4">0:28</div>
+          </div>
         </div> 
 
         <p class="video-description">
@@ -68,7 +88,7 @@ permalink: /dataset/explore
         </p>
 
         {% for rtd in example.realTimeDescription %}
-          <p class="video-realtime-description realTimeDescription-{{forloop.index0}}">
+          <p class="video-realtime-description rtd-{{forloop.index0}}">
             {{ rtd.content }}
           </p>
         {% endfor %}
@@ -96,7 +116,7 @@ permalink: /dataset/explore
             </div>
             <div class="question-btn">
               <button id="showAnswer" onclick="showAnswer('{{ example.number }}', '{{ parentNum }}', '{{ answerNum }}')">Show Answer</button>
-              <button class="localized_button" title="Toggle Play">►  Play shot</button> 
+              <button class="localized_button" onclick="playLocal('{{ example.number }}', '{{ parentNum }}', '{{ answerNum }}')">►  Play shot</button> 
             </div>
         </div>
       {% endfor %}

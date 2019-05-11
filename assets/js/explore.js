@@ -1,70 +1,62 @@
 var play = false;
 var exampleNum = 0;
+var rtdNum = 0;
+var startTime = [0, 9, 16, 36, 40, 51];
 
 $(document).ready(function() {
-  var exampleBoxes = $("div.explore").find("div.examples");
-  
+  var i;
+
+  /*** Init description field ***/
+  showRealTimeDescription();
+  /******************************/
+
   /*** Init question field ***/
+  var exampleBoxes = $("div.explore").find("div.examples");
   exampleBoxes[exampleNum].style.display = 'block';
 
-  var i;
   for (i = 1; i < exampleBoxes.length; i++) {
     exampleBoxes[i].style.display = 'none';
   }
   /***************************/
-
-  /*** VIDEO CONTROLL ***/ 
-  /*
-  var video = document.getElementsByClassName("viewer")[0]; 
-  var slider = document.getElementsByClassName("localized_slider")[0];
-  var btn = document.getElementsByClassName("localized_button")[0];
-
-  //slider.value = 20;
-
-  btn.addEventListener("click", function() {
-    if (video.paused) {
-      play = true;
-      if (video.currentTime < 20 || video.currentTime > 40 ) {
-        video.currentTime = 20;
-      }
-      video.play();
-      btn.innerHTML="❚ ❚ Pause";
-    }
-    else {
-      play = false;
-      video.pause();
-      btn.innerHTML="► Play Localized";
-    }
-  });
-
-  slider.addEventListener("change", function(){
-    var time = video.duration * (slider.value / 100);
-
-    video.currentTime = time;
-  });
-
-  video.addEventListener("timeupdate", function() {
-    if (play && video.currentTime > 40) {
-      video.pause();
-      btn.innerHTML="► Play Localized";
-      video.currentTime = 20;
-    }
-
-    if (video.currentTime > 40)
-      play = false;
-
-    var value = (100/video.duration) * video.currentTime;
-    slider.value = value;
-  });
-  */
-  /**********************/
-
 });
 
+function videoSync() {
+  var video = $("video.viewer-" + exampleNum).get(0);
+  var rtdBoxes = $("div.example-"+exampleNum).find("p.video-realtime-description");
+
+  var currTime = video.currentTime;
+  var next = rtdNum + 1;
+  if (next >= rtdBoxes.length)
+    rtdNum = rtdBoxes.length - 1;
+
+  if (currTime >= startTime[rtdNum] && currTime < startTime[next]) {
+    for (i = 0; i < rtdBoxes.length; i++) {
+      rtdBoxes[i].style.display = 'none';
+    }
+    rtdBoxes[rtdNum].style.display = 'block';
+  }
+
+  if (currTime >= startTime[next]) {
+    rtdNum += 1;
+  }
+
+  if (currTime >= video.duration) {
+    rtdNum = 0;
+  }
+}
+
+function showRealTimeDescription() {
+  var rtdBoxes = $("div.example-"+exampleNum).find("p.video-realtime-description");
+
+  rtdBoxes[rtdNum].style.display = 'block';
+
+  for (i = 1; i < rtdBoxes.length; i++) {
+    rtdBoxes[i].style.display = 'none';
+  }
+}
+
 function showAnswer(e, p, a) {
-  var parent= document.querySelector(".question-"+p);
-  var answer = parent.querySelector("#answer-"+a);
-  answer.style.color = "#ed1004";
+  $(".example-" + e + " .question-" + p + " .question-txt .o-" + a).css("color", "#ed1004");
 }
 
 function prevQuestion() {
@@ -85,6 +77,20 @@ function prevQuestion() {
   }
 }
 
+function playLocal(e, p, a) {
+  /*** VIDEO CONTROLL ***/ 
+  var video = $("video.viewer-" + e).get(0);
+
+  if (video.paused) {
+    video.play();
+  }
+  else {
+    video.pause();
+  }
+  /**********************/
+  showRealTimeDescription();
+}
+
 function nextQuestion() {
   var exampleBoxes = $("div.explore").find("div.examples");
 
@@ -101,4 +107,6 @@ function nextQuestion() {
       }
     }
   }
+
+  showRealTimeDescription();
 } 
