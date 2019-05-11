@@ -1,7 +1,8 @@
-var play = false;
 var exampleNum = 0;
 var rtdNum = 0;
-var startTime = [0, 9, 16, 36, 40, 51];
+var realTimeStartTime = [0, 9, 16, 36, 40, 51];
+var handleStartTime = [5, 10, 15, 20, 25]
+var handleEndTime = [8, 13, 18, 23, 28]
 
 $(document).ready(function() {
   var i;
@@ -29,19 +30,47 @@ function videoSync() {
   if (next >= rtdBoxes.length)
     rtdNum = rtdBoxes.length - 1;
 
-  if (currTime >= startTime[rtdNum] && currTime < startTime[next]) {
+  if (currTime >= realTimeStartTime[rtdNum] && currTime < realTimeStartTime[next]) {
     for (i = 0; i < rtdBoxes.length; i++) {
       rtdBoxes[i].style.display = 'none';
     }
     rtdBoxes[rtdNum].style.display = 'block';
   }
 
-  if (currTime >= startTime[next]) {
+  if (currTime >= realTimeStartTime[next]) {
     rtdNum += 1;
   }
 
   if (currTime >= video.duration) {
     rtdNum = 0;
+  }
+}
+
+function playLocal(e, q) {
+  /*** VIDEO CONTROLL ***/ 
+  var video = $("video.viewer-" + e);
+
+  if (video.get(0).paused && handleStartTime[q] <= video.get(0).duration) {
+    video.get(0).currentTime = handleStartTime[q];
+    video.get(0).play();
+
+    video.on("timeupdate", function() {
+      endLocal(e, q) 
+    });
+  }
+  else {
+    video.get(0).pause();
+  }
+
+  /**********************/
+  showRealTimeDescription();
+}
+
+function endLocal(e, q) {
+  var video = $("video.viewer-" + e);
+  if (video.get(0).currentTime >= handleEndTime[q]) {
+    video.get(0).pause();
+    video.off("timeupdate");
   }
 }
 
@@ -55,8 +84,8 @@ function showRealTimeDescription() {
   }
 }
 
-function showAnswer(e, p, a) {
-  $(".example-" + e + " .question-" + p + " .question-txt .o-" + a).css("color", "#ed1004");
+function showAnswer(e, q, a) {
+  $(".example-" + e + " .question-" + q + " .question-txt .o-" + a).css("color", "#ed1004");
 }
 
 function prevQuestion() {
@@ -75,20 +104,6 @@ function prevQuestion() {
       }
     }
   }
-}
-
-function playLocal(e, p, a) {
-  /*** VIDEO CONTROLL ***/ 
-  var video = $("video.viewer-" + e).get(0);
-
-  if (video.paused) {
-    video.play();
-  }
-  else {
-    video.pause();
-  }
-  /**********************/
-  showRealTimeDescription();
 }
 
 function nextQuestion() {

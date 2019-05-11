@@ -95,7 +95,7 @@ permalink: /dataset/explore
       </div>
       
       {% for e in example.questions %}
-      {% assign parentNum = forloop.index0 %}
+      {% assign questionNum = forloop.index0 %}
       {% assign answerNum = e.answer %}
         <div class="question-field question-{{ forloop.index0 }}">
             <div class="question-header">
@@ -115,8 +115,8 @@ permalink: /dataset/explore
               </div>
             </div>
             <div class="question-btn">
-              <button id="showAnswer" onclick="showAnswer('{{ example.number }}', '{{ parentNum }}', '{{ answerNum }}')">Show Answer</button>
-              <button class="localized_button" onclick="playLocal('{{ example.number }}', '{{ parentNum }}', '{{ answerNum }}')">►  Play shot</button> 
+              <button id="showAnswer" onclick="showAnswer('{{ example.number }}', '{{ questionNum }}', '{{ answerNum }}')">Show Answer</button>
+              <button class="localized_button" onclick="playLocal('{{ example.number }}', '{{ questionNum }}')">►  Play shot</button> 
             </div>
         </div>
       {% endfor %}

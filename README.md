@@ -118,10 +118,9 @@
 >1.2.1. Real time description 시간 수정
 >위치 : **assets/js/explore.js**
 > ```
->var play = false;
->var exampleNum = 0;
->var rtdNum = 0;
->var startTime = [0, 9, 16, 36, 40, 51]; // Real-time description 시작 표시 시간 수정
+>...
+>var realTimeStartTime = [0, 9, 16, 36, 40, 51]; // Real-time description 시작 표시 시간 수정
+>
 >$(document).ready(function() {
 > ...
 > ```
@@ -136,7 +135,6 @@
 >}
 > ...
 > ```
-
 >내용: Marker handle 추가/삭제/수정
 >위치 : **explore.md**
 > ```
@@ -149,6 +147,16 @@
 >    </div>
      ...>
 >  </div> 
+> ```
+>1.2.3. Play local 수정
+>위치 : **assets/js/explore.js**
+> ```
+>var handleStartTime = [5, 10, 15, 20, 25] // Handle start time
+>var handleEndTime = [8, 13, 18, 23, 28] // Handle end time
+>...
+>
+>$(document).ready(function() {
+> ...
 > ```
 ###### 1.3. 오른쪽 하단 (Question field)
 >위치 : **_data/questions.yml**
