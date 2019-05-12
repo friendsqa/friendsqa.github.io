@@ -74,6 +74,10 @@
   text-align: left;
 }
 
+.video-field .viewer {
+  margin-bottom: 1em;
+}
+
 .video-field .video-play-controls {
   width: 96%;
   height: auto;
@@ -109,16 +113,20 @@
     border: 0.1em solid #cccccc;
     border-radius: 0.3em;
     color: #cccccc;
-    font-size: 0.76em;
+    font-size: 0.8em;
 
-    padding: 0em 0.3em;
+    padding: 0em 0.12em;
     min-width: 2em;
+    text-align: center;
 
     position: absolute;
+    @media screen and (max-width: 1300px) {
+      font-size: 0.5em;
+    }
   }
 
   .marker-handle-left {
-    top: -2em;
+    top: -2.3em;
     left: -2em;
   }
   
