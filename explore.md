@@ -12,42 +12,17 @@ permalink: /dataset/explore
     Explore
   </h1>
   <div class="content-item">
-    <div class="stats-field">
-      <div id="stats-questions">
+    <div class="checklist-field">
+      <div class="checklist scene-1">
         <span id="header">
-          152.5K questions
+					Scene 1
         </span>
         <ul> 
-          <li>84.8K What</li>
+          <li>Shot 1</li>
           <li>17.7K Who</li>
           <li>17.8K Where</li>
           <li>15.8K Why</li>
           <li>13.6K How</li>
-        </ul>
-      </div>
-      <div id="stats-episodes">
-        <span id="header">
-          925 episodes from 6 TV shows
-        </span>
-        <ul> 
-          <li>Sitcoms:
-            <ul>
-              <li>Friends</li>
-              <li>The Big Bang Theory</li>
-              <li>How I Met Your Mother</li>
-            </ul>
-          </li>
-          <li>Medical:
-            <ul>
-              <li>Grey's Anatomy</li>
-              <li>House M.D.</li>
-            </ul>
-          </li>
-          <li>Crime:
-            <ul>
-              <li>Castle</li>
-            </ul>
-          </li>
         </ul>
       </div>
     </div>
@@ -107,27 +82,12 @@ permalink: /dataset/explore
                 {{ e.question }}
               </div>
               <div class="o">
-                {% for o in e.options %}
-                  <div class="o-{{forloop.index0}}">
-                    <span id="oo"> Answer {{forloop.index0}} </span>{{ o.option }}
-                  </div>
-                {% endfor %}
+								<span id="oo"> Answer  </span> {{ e.answer }}
               </div>
-            </div>
-            <div class="question-btn">
-              <button id="showAnswer" onclick="showAnswer('{{ example.number }}', '{{ questionNum }}', '{{ answerNum }}')">Show Answer</button>
-              <button class="localized_button" onclick="playLocal('{{ example.number }}', '{{ questionNum }}')">►  Play shot</button> 
             </div>
         </div>
       {% endfor %}
 
-      <div class="button-field">
-          <div id="qControl-field">
-            <button id="prev" onclick="prevQuestion()">Prev example</button>
-            <span id="qIndex"> {{ forloop.index }} / {{ forloop.length }}</span>
-            <button id="next" onclick="nextQuestion()">Next example</button>
-          </div>
-      </div>
     </div>
     {% endfor %}
 </div>

@@ -11,45 +11,15 @@
     - content : This is the sixth real-time description.
   questions:
     - question: What room was Wilson breaking into when House found him?
-      answer: 3
-      options: 
-        - option: The bedroom.
-        - option: The bathroom.
-        - option: The living room.
-        - option: The kitchen.
-        - option: The dining room.
+      answer: The kitchen.
     - question: What room was Wilson breaking into when House found him?
-      answer: 3
-      options: 
-        - option: The bedroom.
-        - option: The bathroom.
-        - option: The living room.
-        - option: The kitchen.
-        - option: The dining room.
+      answer: The kitchen.
     - question: What room was Wilson breaking into when House found him?
-      answer: 3
-      options: 
-        - option: The bedroom.
-        - option: The bathroom.
-        - option: The living room.
-        - option: The kitchen.
-        - option: The dining room.
+      answer: The kitchen.
     - question: What room was Wilson breaking into when House found him?
-      answer: 3
-      options: 
-        - option: The bedroom.
-        - option: The bathroom.
-        - option: The living room.
-        - option: The kitchen.
-        - option: The dining room.
+      answer: The kitchen.
     - question: What room was Wilson breaking into when House found him?
-      answer: 3
-      options: 
-        - option: The bedroom.
-        - option: The bathroom.
-        - option: The living room.
-        - option: The kitchen.
-        - option: The dining room.
+      answer: The kitchen.
 
 - number: 1
   src: /assets/images/examples/3.mp4
@@ -64,45 +34,15 @@
     - content : This is the sixth real-time description.
   questions:
     - question: Which FRIENDS are siblings? 
-      answer: 1
-      options: 
-        - option: The bedroom.
-        - option: The bathroom.
-        - option: The living room.
-        - option: The kitchen.
-        - option: The dining room.
+      answer: The kitchen.
     - question: Which FRIENDS are siblings? 
-      answer: 1
-      options: 
-        - option: The bedroom.
-        - option: The bathroom.
-        - option: The living room.
-        - option: The kitchen.
-        - option: The dining room.
+      answer: The kitchen.
     - question: Which FRIENDS are siblings? 
-      answer: 1
-      options: 
-        - option: The bedroom.
-        - option: The bathroom.
-        - option: The living room.
-        - option: The kitchen.
-        - option: The dining room.
+      answer: The kitchen.
     - question: Which FRIENDS are siblings? 
-      answer: 1
-      options: 
-        - option: The bedroom.
-        - option: The bathroom.
-        - option: The living room.
-        - option: The kitchen.
-        - option: The dining room.
+      answer: The kitchen.
     - question: Which FRIENDS are siblings? 
-      answer: 1
-      options: 
-        - option: The bedroom.
-        - option: The bathroom.
-        - option: The living room.
-        - option: The kitchen.
-        - option: The dining room.
+      answer: The kitchen.
 
 - number: 2
   src: /assets/images/examples/4.mp4
@@ -117,45 +57,15 @@
     - content : This is the sixth real-time description.
   questions:
     - question: What room was Wilson breaking into when House found him?
-      answer: 1
-      options: 
-        - option: The bedroom.
-        - option: The bathroom.
-        - option: The living room.
-        - option: The kitchen.
-        - option: The dining room.
+      answer: The kitchen.
     - question: What room was Wilson breaking into when House found him?
-      answer: 1
-      options: 
-        - option: The bedroom.
-        - option: The bathroom.
-        - option: The living room.
-        - option: The kitchen.
-        - option: The dining room.
+      answer: The kitchen.
     - question: What room was Wilson breaking into when House found him?
-      answer: 1
-      options: 
-        - option: The bedroom.
-        - option: The bathroom.
-        - option: The living room.
-        - option: The kitchen.
-        - option: The dining room.
+      answer: The kitchen.
     - question: What room was Wilson breaking into when House found him?
-      answer: 1
-      options: 
-        - option: The bedroom.
-        - option: The bathroom.
-        - option: The living room.
-        - option: The kitchen.
-        - option: The dining room.
+      answer: The kitchen.
     - question: What room was Wilson breaking into when House found him?
-      answer: 1
-      options: 
-        - option: The bedroom.
-        - option: The bathroom.
-        - option: The living room.
-        - option: The kitchen.
-        - option: The dining room.
+      answer: The kitchen.
 
 - number: 3
   src: /assets/images/examples/8.mp4
@@ -170,45 +80,15 @@
     - content : This is the sixth real-time description.
   questions:
     - question: What room was Wilson breaking into when House found him?
-      answer: 1
-      options: 
-        - option: The bedroom.
-        - option: The bathroom.
-        - option: The living room.
-        - option: The kitchen.
-        - option: The dining room.
+      answer: The kitchen.
     - question: What room was Wilson breaking into when House found him?
-      answer: 1
-      options: 
-        - option: The bedroom.
-        - option: The bathroom.
-        - option: The living room.
-        - option: The kitchen.
-        - option: The dining room.
+      answer: The kitchen.
     - question: What room was Wilson breaking into when House found him?
-      answer: 1
-      options: 
-        - option: The bedroom.
-        - option: The bathroom.
-        - option: The living room.
-        - option: The kitchen.
-        - option: The dining room.
+      answer: The kitchen.
     - question: What room was Wilson breaking into when House found him?
-      answer: 1
-      options: 
-        - option: The bedroom.
-        - option: The bathroom.
-        - option: The living room.
-        - option: The kitchen.
-        - option: The dining room.
+      answer: The kitchen.
     - question: What room was Wilson breaking into when House found him?
-      answer: 1
-      options: 
-        - option: The bedroom.
-        - option: The bathroom.
-        - option: The living room.
-        - option: The kitchen.
-        - option: The dining room.
+      answer: The kitchen.
 
 - number: 4
   src: /assets/images/examples/9.mp4
@@ -223,42 +103,12 @@
     - content : This is the sixth real-time description.
   questions:
     - question: Who did Rachel almost marry? 
-      answer: 1
-      options: 
-        - option: The bedroom.
-        - option: The bathroom.
-        - option: The living room.
-        - option: The kitchen.
-        - option: The dining room.
+      answer: The kitchen.
     - question: Who did Rachel almost marry? 
-      answer: 1
-      options: 
-        - option: The bedroom.
-        - option: The bathroom.
-        - option: The living room.
-        - option: The kitchen.
-        - option: The dining room.
+      answer: The kitchen.
     - question: Who did Rachel almost marry?
-      answer: 1
-      options: 
-        - option: The bedroom.
-        - option: The bathroom.
-        - option: The living room.
-        - option: The kitchen.
-        - option: The dining room.
+      answer: The kitchen.
     - question: Who did Rachel almost marry? 
-      answer: 1
-      options: 
-        - option: The bedroom.
-        - option: The bathroom.
-        - option: The living room.
-        - option: The kitchen.
-        - option: The dining room.
+      answer: The kitchen.
     - question: Who did Rachel almost marry? 
-      answer: 1
-      options: 
-        - option: The bedroom.
-        - option: The bathroom.
-        - option: The living room.
-        - option: The kitchen.
-        - option: The dining room.
+      answer: The kitchen.

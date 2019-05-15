@@ -84,10 +84,6 @@ function showRealTimeDescription() {
   }
 }
 
-function showAnswer(e, q, a) {
-  $(".example-" + e + " .question-" + q + " .question-txt .o-" + a).css("color", "#ed1004");
-}
-
 function prevQuestion() {
   var exampleBoxes = $("div.explore").find("div.examples");
 
