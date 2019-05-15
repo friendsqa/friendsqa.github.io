@@ -10,12 +10,21 @@ nav.navbar {
   width: 100%;
   z-index: 1;
 
+  @media screen and (max-width: 535px) {
+    height: 1.5em;
+  }
 }
 
 .logo-field {
   position: relative;
   float: left;
   padding: 0.625em 1em;
+  @media screen and (max-width: 535px) {
+    padding: .1em .3em;
+  }
+  @media screen and (max-width: 380px) {
+    padding: .1em;
+  }
 }
 
 .logo-field a {
@@ -23,19 +32,34 @@ nav.navbar {
   font-size: 1.5em;
   font-weight: bold;
   text-decoration: none;
+
+  @media screen and (max-width: 535px) {
+    font-size: .5em;
+  }
+  @media screen and (max-width: 380px) {
+    font-size: .3em;
+  }
 }
 
 .navigation-field {
   float: right;
 }
 
-.navigation-field a {
-  color: white; 
+.navigation-field a { color: white; 
   float: left;
   font-size: 1em;
   text-align: center;
   padding: 0.9em 1em;
   text-decoration: none;
+
+  @media screen and (max-width: 535px) {
+    font-size: .3em;
+    padding: .5em;
+  }
+  @media screen and (max-width: 380px) {
+    font-size: .15em;
+    padding: .5em .1em;
+  }
 }
 
 .dropdown { 
@@ -51,6 +75,15 @@ nav.navbar {
   background-color: inherit;
   font-family: inherit; 
   margin: 0; 
+
+  @media screen and (max-width: 535px) {
+    font-size: .3em;
+    padding: .3em;
+  }
+  @media screen and (max-width: 380px) {
+    font-size: .15em;
+    padding: .5em .3em;
+  }
 }
 
 .navigation-field a:hover, .dropdown:hover .dropbtn {
