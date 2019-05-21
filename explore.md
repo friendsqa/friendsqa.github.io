@@ -13,16 +13,204 @@ permalink: /dataset/explore
   </h1>
   <div class="content-item">
     <div class="checklist-field">
-      <div class="checklist scene-1">
+      <div class="checklist scene-0">
         <span id="header">
-					Scene 1
+          <label class="checkbox-container">Scene 1
+            <input type="checkbox" checked="checked" onclick="selectScene(0)">
+            <span class="checkmark"></span>
+          </label>
         </span>
         <ul> 
-          <li>Shot 1</li>
-          <li>17.7K Who</li>
-          <li>17.8K Where</li>
-          <li>15.8K Why</li>
-          <li>13.6K How</li>
+          <li>
+          <label class="checkbox-container">Shot 1
+            <input type="checkbox" onclick="selectShot(0, 1)">
+            <span class="checkmark"></span>
+          </label>
+          </li>
+          <li>
+          <label class="checkbox-container">Shot 2
+            <input type="checkbox" onclick="selectShot(0, 2)">
+            <span class="checkmark"></span>
+          </label>
+          </li>
+          <li>
+          <label class="checkbox-container">Shot 3
+            <input type="checkbox" onclick="selectShot(0, 3)">
+            <span class="checkmark"></span>
+          </label>
+          </li>
+          <li>
+          <label class="checkbox-container">Shot 4
+            <input type="checkbox" onclick="selectShot(0, 4)">
+            <span class="checkmark"></span>
+          </label>
+          </li>
+          <li>
+          <label class="checkbox-container">Shot 5
+            <input type="checkbox" onclick="selectShot(0, 5)">
+            <span class="checkmark"></span>
+          </label>
+          </li>
+        </ul>
+      </div>
+      <div class="checklist scene-1">
+        <span id="header">
+          <label class="checkbox-container">Scene 2
+            <input type="checkbox" onclick="selectScene(1)">
+            <span class="checkmark"></span>
+          </label>
+        </span>
+        <ul> 
+          <li>
+          <label class="checkbox-container">Shot 1
+            <input type="checkbox" onclick="selectShot(1, 1)">
+            <span class="checkmark"></span>
+          </label>
+          </li>
+          <li>
+          <label class="checkbox-container">Shot 2
+            <input type="checkbox" onclick="selectShot(1, 2)">
+            <span class="checkmark"></span>
+          </label>
+          </li>
+          <li>
+          <label class="checkbox-container">Shot 3
+            <input type="checkbox" onclick="selectShot(1, 3)">
+            <span class="checkmark"></span>
+          </label>
+          </li>
+          <li>
+          <label class="checkbox-container">Shot 4
+            <input type="checkbox" onclick="selectShot(1, 4)">
+            <span class="checkmark"></span>
+          </label>
+          </li>
+          <li>
+          <label class="checkbox-container">Shot 5
+            <input type="checkbox" onclick="selectShot(1, 5)">
+            <span class="checkmark"></span>
+          </label>
+          </li>
+        </ul>
+      </div>
+      <div class="checklist scene-2">
+        <span id="header">
+          <label class="checkbox-container">Scene 3
+            <input type="checkbox" onclick="selectScene(2)">
+            <span class="checkmark"></span>
+          </label>
+        </span>
+        <ul> 
+          <li>
+          <label class="checkbox-container">Shot 1
+            <input type="checkbox" onclick="selectShot(2, 1)">
+            <span class="checkmark"></span>
+          </label>
+          </li>
+          <li>
+          <label class="checkbox-container">Shot 2
+            <input type="checkbox" onclick="selectShot(2, 2)">
+            <span class="checkmark"></span>
+          </label>
+          </li>
+          <li>
+          <label class="checkbox-container">Shot 3
+            <input type="checkbox" onclick="selectShot(2, 3)">
+            <span class="checkmark"></span>
+          </label>
+          </li>
+          <li>
+          <label class="checkbox-container">Shot 4
+            <input type="checkbox" onclick="selectShot(2, 4)">
+            <span class="checkmark"></span>
+          </label>
+          </li>
+          <li>
+          <label class="checkbox-container">Shot 5
+            <input type="checkbox" onclick="selectShot(2, 5)">
+            <span class="checkmark"></span>
+          </label>
+          </li>
+        </ul>
+      </div>
+      <div class="checklist scene-3">
+        <span id="header">
+          <label class="checkbox-container">Scene 4
+            <input type="checkbox" onclick="selectScene(3)">
+            <span class="checkmark"></span>
+          </label>
+        </span>
+        <ul> 
+          <li>
+          <label class="checkbox-container">Shot 1
+            <input type="checkbox" onclick="selectShot(3, 1)">
+            <span class="checkmark"></span>
+          </label>
+          </li>
+          <li>
+          <label class="checkbox-container">Shot 2
+            <input type="checkbox" onclick="selectShot(3, 2)">
+            <span class="checkmark"></span>
+          </label>
+          </li>
+          <li>
+          <label class="checkbox-container">Shot 3
+            <input type="checkbox" onclick="selectShot(3, 3)">
+            <span class="checkmark"></span>
+          </label>
+          </li>
+          <li>
+          <label class="checkbox-container">Shot 4
+            <input type="checkbox" onclick="selectShot(3, 4)">
+            <span class="checkmark"></span>
+          </label>
+          </li>
+          <li>
+          <label class="checkbox-container">Shot 5
+            <input type="checkbox" onclick="selectShot(3, 5)">
+            <span class="checkmark"></span>
+          </label>
+          </li>
+        </ul>
+      </div>
+      <div class="checklist scene-4">
+        <span id="header">
+          <label class="checkbox-container">Scene 5
+            <input type="checkbox" onclick="selectScene(4)">
+            <span class="checkmark"></span>
+          </label>
+        </span>
+        <ul> 
+          <li>
+          <label class="checkbox-container">Shot 1
+            <input type="checkbox" onclick="selectShot(4, 1)">
+            <span class="checkmark"></span>
+          </label>
+          </li>
+          <li>
+          <label class="checkbox-container">Shot 2
+            <input type="checkbox" onclick="selectShot(4, 2)">
+            <span class="checkmark"></span>
+          </label>
+          </li>
+          <li>
+          <label class="checkbox-container">Shot 3
+            <input type="checkbox" onclick="selectShot(4, 3)">
+            <span class="checkmark"></span>
+          </label>
+          </li>
+          <li>
+          <label class="checkbox-container">Shot 4
+            <input type="checkbox" onclick="selectShot(4, 4)">
+            <span class="checkmark"></span>
+          </label>
+          </li>
+          <li>
+          <label class="checkbox-container">Shot 5
+            <input type="checkbox" onclick="selectShot(4, 5)">
+            <span class="checkmark"></span>
+          </label>
+          </li>
         </ul>
       </div>
     </div>
@@ -30,7 +218,7 @@ permalink: /dataset/explore
     {% for example in site.data.questions %}
     <div class = "examples example-{{example.number}}">
       <div class="video-field">
-        <video class="viewer viewer-{{example.number}}" width="100%" height="auto" ontimeupdate="videoSync()" controls>
+        <video class="viewer viewer-{{example.number}}" width="100%" height="auto" ontimeupdate="videoSync()" >
           <source src="{{ example.src }}" type="video/{{ example.type }}">
         </video>
 
@@ -57,22 +245,20 @@ permalink: /dataset/explore
             <div class="marker-handle-right handle-right-4">0:28</div>
           </div>
         </div> 
-
-        <p class="video-description">
-          {{ example.description }}
-        </p>
-
-        {% for rtd in example.realTimeDescription %}
-          <p class="video-realtime-description rtd-{{forloop.index0}}">
-            {{ rtd.content }}
-          </p>
-        {% endfor %}
       </div>
       
       {% for e in example.questions %}
+      {% assign exampleNum = example.number + 1 %}
       {% assign questionNum = forloop.index0 %}
       {% assign answerNum = e.answer %}
         <div class="question-field question-{{ forloop.index0 }}">
+            <div class="scene-header">
+              {% if questionNum == 0%}
+              Scene {{ exampleNum }} 
+              {% else %}
+              Scene {{ exampleNum }} shot {{ questionNum }}
+              {% endif %}
+            </div>
             <div class="question-header">
               Question Level {{ forloop.index }}
             </div>
@@ -86,6 +272,16 @@ permalink: /dataset/explore
               </div>
             </div>
         </div>
+      {% endfor %}
+
+      <p class="video-description">
+        {{ example.description }}
+      </p>
+
+      {% for rtd in example.realTimeDescription %}
+        <p class="video-realtime-description rtd-{{forloop.index0}}">
+          {{ rtd.content }}
+        </p>
       {% endfor %}
 
     </div>
