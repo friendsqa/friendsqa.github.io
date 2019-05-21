@@ -1,6 +1,8 @@
-var realTimeStartTime = [0, 9, 16, 36, 40, 51];
 var handleStartTime = [5, 10, 15, 20, 25]
 var handleEndTime = [8, 13, 18, 23, 28]
+
+var exampleNum = 0;
+var questionNum = 0;
 
 $(document).ready(function() {
   var i;
@@ -31,6 +33,16 @@ function selectScene(e) {
     checkbox.checked = false;
   }
 
+  exampleNum = e;
+  questionNum = 0;
+
+  var videos = $("div.video-field").find("video");
+  for (i = 0; i < videos.length; i++) {
+    videos[i].pause();
+  }
+  var video = $("video.viewer-" + e);
+  video.attr('controls', true);
+
   showExample(e);
   showRealTimeDescription(e, -1);
   showQuestion(e, 0);
@@ -41,6 +53,9 @@ function selectShot(e, q) {
   var i;
   var sceneBoxes = $("div.checklist-field").find("span#header input");
   var shotBoxes = $("div.checklist-field").find("li input");
+
+  exampleNum = e;
+  questionNum = q;
 
   for (i = 0; i < sceneBoxes.length; i++) {
     var checkbox = sceneBoxes[i];
@@ -55,6 +70,13 @@ function selectShot(e, q) {
   }
   shotBoxes = $("div.scene-"+e).find("li input");
   shotBoxes[q - 1].checked = true;
+
+  var videos = $("div.video-field").find("video");
+  for (i = 0; i < videos.length; i++) {
+    videos[i].pause();
+  }
+  var video = $("video.viewer-" + e);
+  video.attr('controls', false);
 
   showExample(e);
   showRealTimeDescription(e, q - 1);
@@ -112,104 +134,34 @@ function showMarker(e, num) {
   }
 }
 
+function playLocal() {
+  var video = $("video.viewer-" + exampleNum);
+  var playNum = questionNum - 1;
 
-//function videoSync() {
-  //var video = $("video.viewer-" + exampleNum).get(0);
-  //var rtdBoxes = $("div.example-"+exampleNum).find("p.video-realtime-description");
+  if (playNum == -1) {
+    video.attr('controls', true);
+  }
+  else {
+    video.attr('controls', false);
+    if (video.get(0).paused && handleStartTime[playNum] <= video.get(0).duration) {
+      video.get(0).currentTime = handleStartTime[playNum];
+      video.get(0).play();
 
-  //var currTime = video.currentTime;
-  //var next = rtdNum + 1;
-  //if (next >= rtdBoxes.length)
-    //rtdNum = rtdBoxes.length - 1;
+      video.on("timeupdate", function() {
+        endLocal(exampleNum, playNum) 
+      });
+    }
+    else {
+      video.get(0).pause();
+    }
+  }
+}
 
-  //if (currTime >= realTimeStartTime[rtdNum] && currTime < realTimeStartTime[next]) {
-    //for (i = 0; i < rtdBoxes.length; i++) {
-      //rtdBoxes[i].style.display = 'none';
-    //}
-    //rtdBoxes[rtdNum].style.display = 'block';
-  //}
+function endLocal(e, q) {
+  var video = $("video.viewer-" + e);
+  if (video.get(0).currentTime >= handleEndTime[q]) {
+    video.get(0).pause();
+    video.off("timeupdate");
+  }
+}
 
-  //if (currTime >= realTimeStartTime[next]) {
-    //rtdNum += 1;
-  //}
-
-  //if (currTime >= video.duration) {
-    //rtdNum = 0;
-  //}
-//}
-
-//function playLocal(e, q) {
-  //[>** VIDEO CONTROLL **<] 
-  //var video = $("video.viewer-" + e);
-
-  //if (video.get(0).paused && handleStartTime[q] <= video.get(0).duration) {
-    //video.get(0).currentTime = handleStartTime[q];
-    //video.get(0).play();
-
-    //video.on("timeupdate", function() {
-      //endLocal(e, q) 
-    //});
-  //}
-  //else {
-    //video.get(0).pause();
-  //}
-
-  //[>********************<]
-  //showRealTimeDescription();
-//}
-
-//function endLocal(e, q) {
-  //var video = $("video.viewer-" + e);
-  //if (video.get(0).currentTime >= handleEndTime[q]) {
-    //video.get(0).pause();
-    //video.off("timeupdate");
-  //}
-//}
-
-//function showRealTimeDescription() {
-  //var rtdBoxes = $("div.example-"+exampleNum).find("p.video-realtime-description");
-
-  //rtdBoxes[rtdNum].style.display = 'block';
-
-  //for (i = 1; i < rtdBoxes.length; i++) {
-    //rtdBoxes[i].style.display = 'none';
-  //}
-//}
-
-//function prevQuestion() {
-  //var exampleBoxes = $("div.explore").find("div.examples");
-
-  //if (exampleNum != 0)
-    //exampleNum -= 1;
-  //if (exampleNum >= 0) {
-    //var i;
-    //for (i = 0; i < exampleBoxes.length; i++) {
-      //if (i == exampleNum) {
-        //exampleBoxes[i].style.display='block';
-      //}
-      //else {
-        //exampleBoxes[i].style.display='none';
-      //}
-    //}
-  //}
-//}
-
-//function nextQuestion() {
-  //var exampleBoxes = $("div.explore").find("div.examples");
-
-  //if (exampleNum != exampleBoxes.length - 1)
-    //exampleNum += 1;
-  //if (exampleNum < exampleBoxes.length) {
-    //var i;
-    //for (i = 0; i < exampleBoxes.length; i++) {
-      //if (i == exampleNum) {
-        //exampleBoxes[i].style.display='block';
-      //}
-      //else {
-        //exampleBoxes[i].style.display='none';
-      //}
-    //}
-  //}
-
-  //showRealTimeDescription();
-//} 

@@ -218,7 +218,7 @@ permalink: /dataset/explore
     {% for example in site.data.questions %}
     <div class = "examples example-{{example.number}}">
       <div class="video-field">
-        <video class="viewer viewer-{{example.number}}" width="100%" height="auto" ontimeupdate="videoSync()" >
+        <video class="viewer viewer-{{example.number}}" width="100%" height="auto" onclick="playLocal()" controls>
           <source src="{{ example.src }}" type="video/{{ example.type }}">
         </video>
 
