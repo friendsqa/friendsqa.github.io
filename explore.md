@@ -18,6 +18,7 @@ permalink: /dataset/explore
           <label class="checkbox-container">Scene 1
             <input type="checkbox" checked="checked" onclick="selectScene(0)">
             <span class="checkmark"></span>
+            <span>&#9662;</span>
           </label>
         </span>
         <ul> 
@@ -58,6 +59,7 @@ permalink: /dataset/explore
           <label class="checkbox-container">Scene 2
             <input type="checkbox" onclick="selectScene(1)">
             <span class="checkmark"></span>
+            <span>&#9662;</span>
           </label>
         </span>
         <ul> 
@@ -98,6 +100,7 @@ permalink: /dataset/explore
           <label class="checkbox-container">Scene 3
             <input type="checkbox" onclick="selectScene(2)">
             <span class="checkmark"></span>
+            <span>&#9662;</span>
           </label>
         </span>
         <ul> 
@@ -138,6 +141,7 @@ permalink: /dataset/explore
           <label class="checkbox-container">Scene 4
             <input type="checkbox" onclick="selectScene(3)">
             <span class="checkmark"></span>
+            <span>&#9662;</span>
           </label>
         </span>
         <ul> 
@@ -178,6 +182,7 @@ permalink: /dataset/explore
           <label class="checkbox-container">Scene 5
             <input type="checkbox" onclick="selectScene(4)">
             <span class="checkmark"></span>
+            <span>&#9662;</span>
           </label>
         </span>
         <ul> 

@@ -257,7 +257,7 @@
   //background: #da70d6;
   background: #d7d7d7;
   width: 14%;
-  left: 56;
+  left: 56%;
 }
 
 .video-field .video-play-controls button.localized_button {
@@ -457,5 +457,6 @@ input.video-slider:focus::-ms-fill-upper {
 
   figure {
     margin: 0;
+    overflow: scroll;
   }
 }
