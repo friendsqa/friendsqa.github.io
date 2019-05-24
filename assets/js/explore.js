@@ -1,8 +1,10 @@
-var handleStartTime = [5, 10, 15, 20, 25]
-var handleEndTime = [8, 13, 18, 23, 28]
+var handleStartTime = [0, 14, 28, 42, 56]
+var handleEndTime = [13, 27, 41, 55, 69]
+var realTimeStartTime = [0, 14, 28, 42, 56, 60];
 
 var exampleNum = 0;
 var questionNum = 0;
+var rtdNum = 0;
 
 $(document).ready(function() {
   var i;
@@ -47,6 +49,13 @@ function selectScene(e) {
   showRealTimeDescription(e, -1);
   showQuestion(e, 0);
   showMarker(e, -1);
+
+  /*** Show dropdown ***/
+  var checklists = $("div.checklist-field").find("ul");
+  for (i = 0; i < checklists.length; i++) {
+    checklists[i].style.display = 'none';
+  }
+  checklists[e].style.display = 'block';
 }
 
 function selectShot(e, q) {
@@ -86,6 +95,9 @@ function selectShot(e, q) {
 
 function showExample(num) {
   var exampleBoxes = $("div.explore").find("div.examples");
+  var video = $("div.example-" + num).find("video").get(0);
+  var markerBoxes = $("div.example-"+num).find("div.video-marker");
+
   for (i = 0; i < exampleBoxes.length; i++) {
     exampleBoxes[i].style.display = 'none';
   }
@@ -165,3 +177,32 @@ function endLocal(e, q) {
   }
 }
 
+
+function videoSync(e) {
+  var video = $("video.viewer-" + e).get(0);
+  var rtdBoxes = $("div.example-"+e).find("p.video-realtime-description");
+
+  var currTime = video.currentTime;
+
+  var slider = $("div.example-"+e).find("input.video-slider").get(0);
+  slider.value = currTime;
+
+  var next = rtdNum + 1;
+  if (next >= rtdBoxes.length)
+    rtdNum = rtdBoxes.length - 1;
+
+  if (currTime >= realTimeStartTime[rtdNum] && currTime < realTimeStartTime[next]) {
+    for (i = 0; i < rtdBoxes.length; i++) {
+      rtdBoxes[i].style.display = 'none';
+    }
+    rtdBoxes[rtdNum].style.display = 'block';
+  }
+
+  if (currTime >= realTimeStartTime[next]) {
+    rtdNum += 1;
+  }
+
+  if (currTime >= video.duration) {
+    rtdNum = 0;
+  }
+}

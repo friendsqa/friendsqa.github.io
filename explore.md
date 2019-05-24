@@ -218,31 +218,31 @@ permalink: /dataset/explore
     {% for example in site.data.questions %}
     <div class = "examples example-{{example.number}}">
       <div class="video-field">
-        <video class="viewer viewer-{{example.number}}" width="100%" height="auto" onclick="playLocal()" controls>
+        <video class="viewer viewer-{{example.number}}" width="100%" height="auto" onclick="playLocal()" ontimeupdate="videoSync('{{ example.number }}')" controls>
           <source src="{{ example.src }}" type="video/{{ example.type }}">
         </video>
 
         <div class="video-play-controls"> 
           <input type="range" class="video-slider" value="0"> 
           <div class="video-marker marker-0">
-            <div class="marker-handle-left handle-left-0">0:05</div>
-            <div class="marker-handle-right handle-right-0">0:08</div>
+            <div class="marker-handle-left handle-left-0">0:00</div>
+            <div class="marker-handle-right handle-right-0">0:13</div>
           </div>
           <div class="video-marker marker-1">
-            <div class="marker-handle-left handle-left-1">0:10</div>
-            <div class="marker-handle-right handle-right-1">0:13</div>
+            <div class="marker-handle-left handle-left-1">0:14</div>
+            <div class="marker-handle-right handle-right-1">0:27</div>
           </div>
           <div class="video-marker marker-2">
-            <div class="marker-handle-left handle-left-2">0:15</div>
-            <div class="marker-handle-right handle-right-2">0:18</div>
+            <div class="marker-handle-left handle-left-2">0:28</div>
+            <div class="marker-handle-right handle-right-2">0:41</div>
           </div>
           <div class="video-marker marker-3">
-            <div class="marker-handle-left handle-left-3">0:20</div>
-            <div class="marker-handle-right handle-right-3">0:23</div>
+            <div class="marker-handle-left handle-left-3">0:42</div>
+            <div class="marker-handle-right handle-right-3">0:55</div>
           </div>
           <div class="video-marker marker-4">
-            <div class="marker-handle-left handle-left-4">0:25</div>
-            <div class="marker-handle-right handle-right-4">0:28</div>
+            <div class="marker-handle-left handle-left-4">0:56</div>
+            <div class="marker-handle-right handle-right-4">0:69</div>
           </div>
         </div> 
       </div>
@@ -275,6 +275,7 @@ permalink: /dataset/explore
       {% endfor %}
 
       <p class="video-description">
+        <span class="description-header"> Description : </span>
         {{ example.description }}
       </p>
 
