@@ -151,13 +151,13 @@
 }
 
 .video-field {
-  width: 60%;
+  width: 65%;
 
   position: relative;
   left: 50%;
 
   transform: translate(-50%);
-  -webkit-transform: translate(-50%);
+  -moz-transform: translate(-50%);
   -ms-transform: translate(-50%);
 
   p {
@@ -273,7 +273,7 @@
 
 .question-field {
   text-align: left;
-  width: 100%;
+  width: 66%;
   margin-bottom: 1em;
 
   line-height: 1.5em;
@@ -284,6 +284,10 @@
   padding: 0.5em 1em;
 
   position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  -ms-transform: translate(-50%);
 
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -318,20 +322,29 @@
   }
 }
 
-p.video-description, p.video-realtime-description {
-  float: left;
-  width: 100%;
-  margin-top: 1em;
+.description-field {
   display: block;
+  float: left;
+  width: 66%;
+
+  margin-top: 1em;
+  padding: 0.875em 1em;
 
   border-radius: 0.7em;
   border: 0.1em solid #cccccc;
 
-  padding: 0.875em 1em;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  -ms-transform: translate(-50%);
 
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+}
+
+p.video-description, p.video-realtime-description {
 
   @media screen and (max-width: 700px) {
     font-size: .7em;

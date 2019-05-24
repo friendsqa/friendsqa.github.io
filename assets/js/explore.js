@@ -4,6 +4,7 @@ var realTimeStartTime = [0, 14, 28, 42, 56, 60];
 
 var exampleNum = 0;
 var questionNum = 0;
+
 var rtdNum = 0;
 
 $(document).ready(function() {
@@ -81,11 +82,14 @@ function selectShot(e, q) {
   shotBoxes[q - 1].checked = true;
 
   var videos = $("div.video-field").find("video");
+  var playNum = q - 1;
   for (i = 0; i < videos.length; i++) {
     videos[i].pause();
   }
+
   var video = $("video.viewer-" + e);
   video.attr('controls', false);
+  video.get(0).currentTime = handleStartTime[playNum];
 
   showExample(e);
   showRealTimeDescription(e, q - 1);
@@ -95,8 +99,9 @@ function selectShot(e, q) {
 
 function showExample(num) {
   var exampleBoxes = $("div.explore").find("div.examples");
-  var video = $("div.example-" + num).find("video").get(0);
   var markerBoxes = $("div.example-"+num).find("div.video-marker");
+
+  exampleNum = num;
 
   for (i = 0; i < exampleBoxes.length; i++) {
     exampleBoxes[i].style.display = 'none';
@@ -110,6 +115,7 @@ function showRealTimeDescription(e, num) {
     for (i = 0; i < rtdBoxes.length; i++) {
       rtdBoxes[i].style.display = 'none';
     }
+    rtdBoxes[0].style.display = 'block';
   }
   else {
     var rtdBoxes = $("div.example-"+e).find("p.video-realtime-description");
@@ -155,8 +161,8 @@ function playLocal() {
   }
   else {
     video.attr('controls', false);
+
     if (video.get(0).paused && handleStartTime[playNum] <= video.get(0).duration) {
-      video.get(0).currentTime = handleStartTime[playNum];
       video.get(0).play();
 
       video.on("timeupdate", function() {

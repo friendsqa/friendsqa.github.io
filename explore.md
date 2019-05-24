@@ -279,16 +279,18 @@ permalink: /dataset/explore
         </div>
       {% endfor %}
 
-      <p class="video-description">
-        <span class="description-header"> Description : </span>
-        {{ example.description }}
-      </p>
-
-      {% for rtd in example.realTimeDescription %}
-        <p class="video-realtime-description rtd-{{forloop.index0}}">
-          {{ rtd.content }}
+      <div class="description-field">
+        <p class="video-description">
+          <span class="description-header"> Description : </span>
+          {{ example.description }}
         </p>
-      {% endfor %}
+
+        {% for rtd in example.realTimeDescription %}
+          <p class="video-realtime-description rtd-{{forloop.index0}}">
+            {{ rtd.content }}
+          </p>
+        {% endfor %}
+      </div>
 
     </div>
     {% endfor %}
