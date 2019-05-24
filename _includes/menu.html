@@ -2,25 +2,47 @@
   <div class="logo-field">
     <a href="/">FriendsQA</a>
   </div>
-  <div class="navigation-field">
-  {% for item in site.data.menu %}
-    {% if item.child %}
-      <div class="dropdown">
-        <a class="dropbtn" > {{ item.name }}
-          <i class="fa fa-caret-down"></i>
-        </a>
-        <div class="dropdown-content">
-          {% for child in item.children %}
-            <a href="{{ child.link }}">{{ child.name }}</a>
-          {% endfor %}
+  <button class="nav-toggle"><span id="hb-0"></span><span id="hb-1"></span><span id="hb-2"></span></button>
+  <div class="navigation-field-toggle">
+    {% for item in site.data.menu %}
+      {% if item.child %}
+        <div class="dropdown">
+          <a class="toggle-menu">
+            {{ item.name }}
+            <span class="fa fa-caret-down">&#9662;</span>
+          </a>
+          <div class="dropdown-content">
+            {% for child in item.children %}
+              <a class = "toggle-menu" href="{{ child.link }}">{{ child.name }}</a>
+            {% endfor %}
+          </div>
         </div>
-      </div>
-    {% else %}
-    <a {% if page.url != item.link %}href="{{ item.link }}"{% endif %} {% if item.link == "/" %}onclick="moveTo('{{item.name}}')"{% endif %}>
-          {{ item.name  }}
-      </a>
-    {% endif %}
-  {% endfor %}
+      {% else %}
+        <a class="toggle-menu" {% if page.url != item.link %}href="{{ item.link }}"{% endif %} {% if item.link == "/" %}onclick="moveTo('{{item.name}}')"{% endif %}>
+            {{ item.name  }}
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <div class="navigation-field">
+    {% for item in site.data.menu %}
+      {% if item.child %}
+        <div class="dropdown">
+          <a class="dropbtn" > {{ item.name }}
+            <span class="fa fa-caret-down">&#9662;</span>
+          </a>
+          <div class="dropdown-content">
+            {% for child in item.children %}
+              <a href="{{ child.link }}">{{ child.name }}</a>
+            {% endfor %}
+          </div>
+        </div>
+      {% else %}
+        <a {% if page.url != item.link %}href="{{ item.link }}"{% endif %} {% if item.link == "/" %}onclick="moveTo('{{item.name}}')"{% endif %}>
+            {{ item.name  }}
+        </a>
+      {% endif %}
+    {% endfor %}
   </div>
 </nav>
 
