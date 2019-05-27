@@ -223,45 +223,45 @@ permalink: /dataset/explore
     {% for example in site.data.questions %}
     <div class = "examples example-{{example.number}}">
       <div class="video-field">
-        <video class="viewer viewer-{{example.number}}" width="100%" height="auto" onclick="playLocal()" ontimeupdate="videoSync('{{ example.number }}')" controls>
+        <video preload="auto" class="viewer viewer-{{example.number}}" width="100%" height="auto" onclick="playLocal()" ontimeupdate="videoSync('{{ example.number }}')" controls>
           <source src="{{ example.src }}" type="video/{{ example.type }}">
         </video>
 
         <div class="video-play-controls"> 
-          <input type="range" class="video-slider" value="0"> 
+          <input type="range" class="video-slider" value="0" min="0" max="1" data-shots="{{ example.shots }}"> 
+
           <div class="video-marker marker-0">
-            <div class="marker-handle-left handle-left-0">0:00</div>
-            <div class="marker-handle-right handle-right-0">0:13</div>
+            <div class="marker-handle-left handle-left-0"></div>
+            <div class="marker-handle-right handle-right-0"></div>
           </div>
           <div class="video-marker marker-1">
-            <div class="marker-handle-left handle-left-1">0:14</div>
-            <div class="marker-handle-right handle-right-1">0:27</div>
+            <div class="marker-handle-left handle-left-1"></div>
+            <div class="marker-handle-right handle-right-1"></div>
           </div>
           <div class="video-marker marker-2">
-            <div class="marker-handle-left handle-left-2">0:28</div>
-            <div class="marker-handle-right handle-right-2">0:41</div>
+            <div class="marker-handle-left handle-left-2"></div>
+            <div class="marker-handle-right handle-right-2"></div>
           </div>
           <div class="video-marker marker-3">
-            <div class="marker-handle-left handle-left-3">0:42</div>
-            <div class="marker-handle-right handle-right-3">0:55</div>
+            <div class="marker-handle-left handle-left-3"></div>
+            <div class="marker-handle-right handle-right-3"></div>
           </div>
           <div class="video-marker marker-4">
-            <div class="marker-handle-left handle-left-4">0:56</div>
-            <div class="marker-handle-right handle-right-4">0:69</div>
+            <div class="marker-handle-left handle-left-4"></div>
+            <div class="marker-handle-right handle-right-4"></div>
           </div>
         </div> 
       </div>
       
       {% for e in example.questions %}
-      {% assign exampleNum = example.number + 1 %}
       {% assign questionNum = forloop.index0 %}
       {% assign answerNum = e.answer %}
         <div class="question-field question-{{ forloop.index0 }}">
             <div class="scene-header">
               {% if questionNum == 0%}
-              Scene {{ exampleNum }} 
+                Scene {{ forloop.index }} 
               {% else %}
-              Scene {{ exampleNum }} shot {{ questionNum }}
+                Scene {{ forloop.index }} shot {{ questionNum }}
               {% endif %}
             </div>
             <div class="question-header">

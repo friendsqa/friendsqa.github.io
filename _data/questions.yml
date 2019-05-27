@@ -1,9 +1,10 @@
 - number: 0
   src: /assets/images/examples/explore.mp4
   type: mp4
-  description: This is a static description. 0
+  shots: 0, 14, 28, 42, 46
+  description: This is a static description 0.This is a static description 0.This is a static description 0.This is a static description 0.This is a static description 0.
   realTimeDescription: 
-    - content : This is the first real-time description.
+    - content : This is the first real-time description.This is the first real-time description. This is the first real-time description. This is the first real-time description.
     - content : This is the second real-time description.
     - content : This is the third real-time description.
     - content : This is the forth real-time description.
@@ -25,6 +26,7 @@
 - number: 1
   src: /assets/images/examples/3.mp4
   type: mp4
+  shots: 0, 5, 10, 15, 20
   description: static description 1
   realTimeDescription: 
     - content : This is the first real-time description.
@@ -49,6 +51,7 @@
 - number: 2
   src: /assets/images/examples/4.mp4
   type: mp4
+  shots: 0, 10, 20, 30, 37
   description: static description 2
   realTimeDescription: 
     - content : This is the first real-time description.
@@ -73,6 +76,7 @@
 - number: 3
   src: /assets/images/examples/8.mp4
   type: mp4
+  shots: 0, 10, 20, 25, 30
   description: static description 3
   realTimeDescription: 
     - content : This is the first real-time description.
@@ -97,6 +101,7 @@
 - number: 4
   src: /assets/images/examples/9.mp4
   type: mp4
+  shots: 0, 10, 25, 40, 50
   description: static description 4
   realTimeDescription: 
     - content : This is the first real-time description.
