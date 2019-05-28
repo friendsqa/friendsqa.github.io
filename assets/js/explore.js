@@ -50,7 +50,7 @@ function selectScene(e) {
     videos[i].currentTime = 0;
   }
   var video = $("video.viewer-" + e);
-  video.attr('controls', true);
+  //video.attr('controls', true);
 
   /*** Set fields ***/
   showExample(e);
@@ -95,7 +95,7 @@ function selectShot(e, q) {
   }
 
   var video = $("video.viewer-" + e);
-  video.attr('controls', false);
+  //video.attr('controls', false);
   video.get(0).currentTime = handleStartTime[playNum];
 
   showExample(e);
@@ -222,10 +222,10 @@ function playLocal() {
   var playNum = questionNum - 1;
 
   if (playNum == -1) {
-    video.attr('controls', true);
+    //video.attr('controls', true);
   }
   else {
-    video.attr('controls', false);
+    //video.attr('controls', false);
 
     if (video.get(0).paused && handleStartTime[playNum] <= video.get(0).duration) {
       video.get(0).play();
