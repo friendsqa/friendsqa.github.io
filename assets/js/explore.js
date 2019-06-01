@@ -49,8 +49,6 @@ function selectScene(e) {
     videos[i].pause();
     videos[i].currentTime = 0;
   }
-  var video = $("video.viewer-" + e);
-  //video.attr('controls', true);
 
   /*** Set fields ***/
   showExample(e);
@@ -133,7 +131,6 @@ function showRealTimeDescription(e, num) {
   }
 }
 
-
 function showQuestion(e, num) {
   var questionBoxes = $("div.example-"+e).find("div.question-field");
   for (i = 0; i < questionBoxes.length; i++) {
@@ -149,8 +146,9 @@ function showMarker(e, num) {
     var markerBoxes = $("div.example-"+e).find("div.video-marker");
     var handleLefts = $("div.example-"+e).find("div.marker-handle-left");
     var handleRights = $("div.example-"+e).find("div.marker-handle-right");
-
     var handleTimes = $("div.example-"+e).find("input.video-slider")[0].dataset.shots.split(", ");
+    var slider = $(".video-play-controls input.video-slider");
+
     handleStartTime = [];
     handleEndTime = [];
     realTimeStartTime = [];
@@ -180,11 +178,13 @@ function showMarker(e, num) {
       $("div.example-"+ e + " div.handle-right-"+i).empty().html(time);
     }
 
+    /*** Set background for slider ***/
     for (i = 0; i < markerBoxes.length; i++) {
       markerBoxes[i].style.display = 'block';
       markerBoxes[i].style.left = (handleStartTime[i]/video.duration)*100 + "%";
-      markerBoxes[i].style.width = ((handleEndTime[i] - handleStartTime[i] + 1)/video.duration)*100 + "%";
+      markerBoxes[i].style.width = ((handleEndTime[i] - handleStartTime[i])/video.duration)*100 + "%";
     }
+    slider.css("background-color", "#d7d7d7");
 
     for (i = 1; i < handleLefts.length; i++) {
       handleLefts[i].style.display = 'none';
@@ -197,14 +197,19 @@ function showMarker(e, num) {
 
   }
   else {
+    var video = $("video.viewer-"+e).get(0);
     var markerBoxes = $("div.example-"+e).find("div.video-marker");
     var handleLefts = $("div.example-"+e).find("div.marker-handle-left");
     var handleRights = $("div.example-"+e).find("div.marker-handle-right");
+    var slider = $(".video-play-controls input.video-slider");
 
     for (i = 0; i < markerBoxes.length; i++) {
       markerBoxes[i].style.display = 'none';
     }
     markerBoxes[num].style.display = 'block';
+    markerBoxes[num].style.left = (handleStartTime[num]/video.duration)*100 + "%";
+    markerBoxes[num].style.width = ((handleEndTime[num] - handleStartTime[num])/video.duration)*100 + "%";
+    slider.css("background-color", "transparent");
 
     for (i = 0; i < handleLefts.length; i++) {
       handleLefts[i].style.display = 'none';
@@ -221,18 +226,21 @@ function playLocal() {
   var video = $("video.viewer-" + exampleNum);
   var playNum = questionNum - 1;
 
+  // Play shot
   if (playNum == -1) {
-    //video.attr('controls', true);
+    video.get(0).currentTime = 0;
+    video.get(0).play();
   }
   else {
-    //video.attr('controls', false);
+    if (handleStartTime[playNum] <= video.get(0).duration) {
+      video.get(0).currentTime = handleStartTime[playNum];
 
-    if (video.get(0).paused && handleStartTime[playNum] <= video.get(0).duration) {
       video.get(0).play();
 
       video.on("timeupdate", function() {
         endLocal(exampleNum, playNum) 
-      }); }
+      }); 
+    }
     else {
       video.get(0).pause();
     }
@@ -246,7 +254,6 @@ function endLocal(e, q) {
     video.off("timeupdate");
   }
 }
-
 
 function videoSync(e) {
   var video = $("video.viewer-" + e).get(0);

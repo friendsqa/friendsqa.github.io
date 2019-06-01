@@ -223,7 +223,7 @@ permalink: /dataset/explore
     {% for example in site.data.questions %}
     <div class = "examples example-{{example.number}}">
       <div class="video-field">
-        <video preload="auto" class="viewer viewer-{{example.number}}" width="100%" height="auto" onclick="playLocal()" ontimeupdate="videoSync('{{ example.number }}')" controls>
+        <video class="viewer viewer-{{example.number}}" width="100%" height="auto" ontimeupdate="videoSync('{{ example.number }}')" controls>
           <source src="{{ example.src }}" type="video/{{ example.type }}">
         </video>
 
@@ -251,6 +251,8 @@ permalink: /dataset/explore
             <div class="marker-handle-right handle-right-4"></div>
           </div>
         </div> 
+
+        <button class="localized_button" onclick="playLocal()">►  Play shot</button>
       </div>
       
       {% for e in example.questions %}
