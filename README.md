@@ -151,21 +151,12 @@
 >  </div>
 > ```
 1.2.3. Play local 수정
->위치 : **assets/js/explore.js**
-> ```
->var handleStartTime = [5, 10, 15, 20, 25] // Handle start time
->var handleEndTime = [8, 13, 18, 23, 28] // Handle end time
->...
->
->$(document).ready(function() {
-> ...
-> ```
-###### 1.3. 오른쪽 하단 (Question field)
 >위치 : **_data/questions.yml**
 > ```
 >- number:{{ Example 번호 }}
 >  src: {{ 비디오 경로 }}
 >  type: {{ 비디오 확장자 }}
+>  shots: {{ shot 시작 시간 입력 }} // PLAY LOCAL TIME
 >  description: {{ STATIC Description }}
 >  realTimeDescription:
 >    - content : {{ REAL-TIME Description0 }}
@@ -174,16 +165,27 @@
 >  questions:
 >    - question: {{ 질문0 }}
 >      answer: {{ 정답 }}
->      options:
->        - option: {{ 보기0 }}
->        - option: {{ 보기1 }}
->         ...
 >    - question: {{ 질문1 }}
 >      answer: {{ 정답 }}
->      options:
->        - option: {{ 보기0 }}
->        - option: {{ 보기1 }}
->         ...
+>      ...
+> ```
+###### 1.3. 오른쪽 하단 (Question field)
+>위치 : **_data/questions.yml**
+> ```
+>- number:{{ Example 번호 }}
+>  src: {{ 비디오 경로 }}
+>  type: {{ 비디오 확장자 }}
+>  shots: {{ shot 시작 시간 입력 }}
+>  description: {{ STATIC Description }}
+>  realTimeDescription:
+>    - content : {{ REAL-TIME Description0 }}
+>    - content : {{ REAL-TIME Description1 }}
+>    ...
+>  questions:
+>    - question: {{ 질문0 }} // Question 0
+>      answer: {{ 정답 }} // Answer 0
+>    - question: {{ 질문1 }} // Question 1
+>      answer: {{ 정답 }} // Answer 1
 >      ...
 > ```
 
