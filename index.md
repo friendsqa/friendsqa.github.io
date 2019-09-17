@@ -8,7 +8,7 @@ title: FriensQA
 <script type="text/javascript" src="/assets/js/index.js"></script>
 
 <div class="bk-container">
-  <img class="bk-img" src="/Users/ahjeong/Desktop/dramaqa.jpg">
+  <img class="bk-img" src="![dramaqa](https://user-images.githubusercontent.com/50164275/65026216-0fbcab00-d973-11e9-9e79-e964f65a70f9.jpg)">
   <h1 class="bk-header">
     FriendsQA for Video Story Understanding
   </h1>
