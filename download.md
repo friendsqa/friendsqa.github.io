@@ -58,8 +58,7 @@ permalink: /dataset/download
       2. Descriptions
     </h2>
     <p class="content-item">
-      Download link: 
-      <a id="download_link" href="#">wlkrjweiorjwe</a>
+      Download link: please fill out this <a id="download_link" href="https://docs.google.com/forms/d/e/1FAIpQLSdqQTHp6-AiNQijHhcPAPvFV_6TFer06e6aWG1l_jRhRo2E5w/viewform">form</a> first
     </p>
   </div>
   <div class = "content-subcontainer">
