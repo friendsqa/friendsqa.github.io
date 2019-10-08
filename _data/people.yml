@@ -1,27 +1,23 @@
 - name: Byungtak Zhang
   affiliation: Professor
-  src: /assets/images/people/people.jpg
+  src: /assets/images/people/professor.jpg
 
-- name: Byungtak Zhang
-  affiliation: Professor
-  src: /assets/images/people/people.jpg
+- name: Kyungwoon On
+  affiliation: Student
+  src: /assets/images/people/people_kwon.jpg
 
-- name: Byungtak Zhang
-  affiliation: Professor
-  src: /assets/images/people/people.jpg
+- name: Kyunghwa Park
+  affiliation: Student
+  src: /assets/images/people/people_khpark.jpg
 
-- name: Byungtak Zhang
+- name: Sungho Choi
   affiliation: Professor
-  src: /assets/images/people/people.jpg
+  src: /assets/images/people/people_shchoi.jpg
 
-- name: Byungtak Zhang
+- name: Gicheon Kang
   affiliation: Professor
-  src: /assets/images/people/people.jpg
+  src: /assets/images/people/people_gckang.jpg
 
-- name: Byungtak Zhang
+- name: Ahjeong Seo
   affiliation: Professor
-  src: /assets/images/people/people.jpg
-
-- name: Byungtak Zhang
-  affiliation: Professor
-  src: /assets/images/people/people.jpg
+  src: /assets/images/people/people_ajseo.jpg
