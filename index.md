@@ -18,6 +18,12 @@ title: DramaQA
   <h1 class = "content-title">
     Updates
   </h1>
+  <h2 class = "">
+    DramaQA is released : <a id="download_link" href="/dataset/download">Download</a> dataset!
+  </h2>
+  <p class="content-item">
+    To download dramaQA dataset, you need to fill out this <a id="download_link" href="https://docs.google.com/forms/d/e/1FAIpQLSdqQTHp6-AiNQijHhcPAPvFV_6TFer06e6aWG1l_jRhRo2E5w/viewform">form</a> first. After that, we will give you an ID for access by email.
+  </p>
   {% for news in site.data.updates %}
   <p class="content-item news news-{{ forloop.index0 }}">
     <span id="date">{{ news.date }}</span>
@@ -28,17 +34,6 @@ title: DramaQA
     <span id="more" onclick="showMore()">More</span>
 <span id="noMoreContext" style="display:none;color: #cccccc;"><br>No more news available.</span>
   </p>
-</div>
-
-<div class="download contetn-container">
-  <h1 class="content-title">
-    <h2 class="content-title">
-        DramaQA is released : <a id="download_link" href="/dataset/download">Download</a> Dataset
-    </h2>
-    <p class="content-item">
-          To download dramaQA dataset, you need to fill out this <a id="download_link" href="https://docs.google.com/forms/d/e/1FAIpQLSdqQTHp6-AiNQijHhcPAPvFV_6TFer06e6aWG1l_jRhRo2E5w/viewform">form</a> first. After that, we will give you an ID for access by email.
-      </p>
-  </h1>
 </div>
 
 <div class="about content-container">
