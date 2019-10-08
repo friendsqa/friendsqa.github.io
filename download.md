@@ -10,12 +10,14 @@ permalink: /dataset/download
   <h1 class = "content-title">
     Download DramaQA Dataset
   </h1>
-  <h2 class="content-subtitle">
-    How to Download DramaQA Dataset
-  </h2>
-  <p class="content-item">
-    Before downloading dramaQA Dataset, you need to fill out this <a id="download_link" href="https://docs.google.com/forms/d/e/1FAIpQLSdqQTHp6-AiNQijHhcPAPvFV_6TFer06e6aWG1l_jRhRo2E5w/viewform">form</a> first. After filling out this form, we will give you an ID to access and download dataset by email.
-  </p>
+  <div class = "content-subcontainer">
+      <h2 class="content-subtitle">
+        How to Download DramaQA Dataset
+      </h2>
+      <p class="content-item">
+        Before downloading dramaQA Dataset, you need to fill out this <a id="download_link" href="https://docs.google.com/forms/d/e/1FAIpQLSdqQTHp6-AiNQijHhcPAPvFV_6TFer06e6aWG1l_jRhRo2E5w/viewform">form</a> first. After filling out this form, we will give you an ID to access and download dataset by email.
+      </p>
+  </div>
   <div class = "content-subcontainer">
     <h2 class="content-subtitle">
       1. Annotation Format
@@ -90,13 +92,13 @@ permalink: /dataset/download
       <p class="content-item">
         In this Q&A dataset, there is only one correct answer. Each data is composed of one question and five candidate answers.
       </p>
-    </div>
-    <div class = "content-subcontainer">
-        <h2 class="content-subtitle">
-          6. Question Level
-        </h2>
-        <p class="content-item">
-          This dataset is about the level of questions.
-        </p>
-      </div>
+   </div>
+   <div class = "content-subcontainer">
+       <h2 class="content-subtitle">
+         6. Question Level
+       </h2>
+       <p class="content-item">
+         This dataset is about the level of questions.
+       </p>
+   </div>
 </div>
