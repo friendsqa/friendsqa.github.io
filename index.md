@@ -26,7 +26,7 @@ title: DramaQA
   </p>
   
   <h5 class="update-history">
-    update history
+     
   </h5>
   {% for news in site.data.updates %}
   <p class="content-item news news-{{ forloop.index0 }}">
