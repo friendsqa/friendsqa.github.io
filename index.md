@@ -31,12 +31,12 @@ title: DramaQA
 </div>
 
 <div class="download contetn-container">
-    <h2 class="content-title">
-        DramaQA is released : <a id="download_link" href="/dataset/download">Download</a> Dataset
-    </h2>
-    <p class="content-item">
-        To download dramaQA dataset, you need to fill out this <a id="download_link" href="https://docs.google.com/forms/d/e/1FAIpQLSdqQTHp6-AiNQijHhcPAPvFV_6TFer06e6aWG1l_jRhRo2E5w/viewform">form</a> first. After that, we will give you an ID for access by email.
-    </p>
+  <h2 class="content-title">
+      DramaQA is released : <a id="download_link" href="/dataset/download">Download</a> Dataset
+  </h2>
+  <p class="content-item">
+      To download dramaQA dataset, you need to fill out this <a id="download_link" href="https://docs.google.com/forms/d/e/1FAIpQLSdqQTHp6-AiNQijHhcPAPvFV_6TFer06e6aWG1l_jRhRo2E5w/viewform">form</a> first. After that, we will give you an ID for access by email.
+  </p>
 </div>
 
 <div class="about content-container">
