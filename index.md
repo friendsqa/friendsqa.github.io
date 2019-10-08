@@ -46,7 +46,7 @@ title: DramaQA
     What is DramaQA?
   </h1>
   <p class="content-item">
-   DramaQA is a large-scale video QA dataset based on a korean popular TV show, “Ohhaeyoung Again”. It consists of 152.5K QA pairs from 21.8K video clips, spanning over 460 hours of video. TGhe questions are designed to be compositional, requiring systems to jointly localize relevant moments within a clip, comprehend subtitles-based dialogue, and recognize relevant visual concepts.
+   DramaQA is a large-scale video QA dataset based on a korean popular TV show, “Ohhaeyoung Again”. It consists of 152.5K QA pairs from 21.8K video clips, spanning over 460 hours of video. The questions are designed to be compositional, requiring systems to jointly localize relevant moments within a clip, comprehend subtitles-based dialogue, and recognize relevant visual concepts.
   </p>
 </div>
 
