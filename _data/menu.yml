@@ -19,17 +19,15 @@
   - name: Code
     link: https://github.com/videoturingtest
 - name: Challenge
-  child: false
-  link: /
-#  children :
-#    - name: 2019
-#      link: /challenge/2019
+  child: true
+  children :
+    - name: 2019
+      link: /
 - name: Workshop
-  child: false
-  link: /
-#  children:
-#  - name: 2019
-#    link : /workshop/2019
+  child: true
+  children:
+  - name: 2019
+    link : /
 - name: Sponsor
   child: false
   link: /sponsor
