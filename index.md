@@ -1,6 +1,6 @@
 ---
 layout: default
-title: FriensQA
+title: DramaQA
 ---
 
 <link rel="stylesheet" href="/assets/css/member.css">
