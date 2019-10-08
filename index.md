@@ -20,11 +20,13 @@ title: DramaQA
   </h1>
   <h2 class = "important-news-content">
     DramaQA is released : <a id="download_link" href="/dataset/download">Download</a> dataset!
-    <p class="content-item">
-        To download dramaQA dataset, you need to fill out this <a id="download_link" href="https://docs.google.com/forms/d/e/1FAIpQLSdqQTHp6-AiNQijHhcPAPvFV_6TFer06e6aWG1l_jRhRo2E5w/viewform">form</a> first. After that, we will give you an ID for access by email.
-      </p>
   </h2>
+  <p class="content-item">
+    To download dramaQA dataset, you need to fill out this <a id="download_link" href="https://docs.google.com/forms/d/e/1FAIpQLSdqQTHp6-AiNQijHhcPAPvFV_6TFer06e6aWG1l_jRhRo2E5w/viewform">form</a> first. After that, we will give you an ID for access by email.
+  </p>
   
+  </h3 class="update-history">
+  </h3>
   {% for news in site.data.updates %}
   <p class="content-item news news-{{ forloop.index0 }}">
     <span id="date">{{ news.date }}</span>
