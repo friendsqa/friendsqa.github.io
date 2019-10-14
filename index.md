@@ -55,7 +55,6 @@ title: DramaQA
    <br />
    We are expecting this challenge could be a starting point to evaluate hierarchical story understanding.
   </p>
-  <br />
   <h2 class = "content-subtitle">
     2. Multi-level Description
   </h2>
@@ -64,7 +63,6 @@ title: DramaQA
    <br />
    We collected the story descriptions for shot and scene level respectively and we limited that the descriptions should be focused on 19 main characters.
   </p>
-  <br />
   <h2 class = "content-subtitle">
     3. Multi-level Difficulty
   </h2>
@@ -79,7 +77,6 @@ title: DramaQA
    <br />
    Lv 4: MC (scene), LC (reason for causality).
   </p>
-  <br />
   <h2 class = "content-subtitle">
     4. Dataset Specification
   </h2>
