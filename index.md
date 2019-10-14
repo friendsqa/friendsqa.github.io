@@ -44,8 +44,29 @@ title: DramaQA
   <h1 class = "content-title">
     What is DramaQA?
   </h1>
+  <h2 class = "content-subtitle">
+    1. Introduction
+  </h2>
   <p class="content-item">
-   DramaQA is a large-scale video QA dataset based on a korean popular TV show, “Ohhaeyoung Again”. It consists of 152.5K QA pairs from 21.8K video clips, spanning over 460 hours of video. The questions are designed to be compositional, requiring systems to jointly localize relevant moments within a clip, comprehend subtitles-based dialogue, and recognize relevant visual concepts.
+   Video Question and Answering (VideoQA) is an emerging benchmark task to measure the levels of machine intelligence for video understanding. While several previous studies have suggested datasets for the VideoQA task, they did not consider story-level understanding, resulting in a lack of
+   variance in the degree of question difficulty and coherent story-centric description.
+   DramaQA is a large-scale video QA dataset based on a Korean popular TV show, “Ohhaeyoung Again.” This dataset contains four levels of QA on difficulty and multi-level character-centered story descriptions.
+  </p>
+  <h2 class = "content-subtitle">
+    2. Multi-level Description
+  </h2>
+  <p class="content-item">
+  </p>
+  <h2 class = "content-subtitle">
+    3. Multi-level Difficulty
+  </h2>
+  <p class="content-item">
+  </p>
+  <h2 class = "content-subtitle">
+    4. Dataset Specification
+  </h2>
+  <p class="content-item">
+    It consists of 8.5K QA pairs from 2.8K video clips, spanning over 36 hours of video.  We are expecting this challenge could be a starting point to evaluate hierarchical story understanding.
   </p>
 </div>
 
