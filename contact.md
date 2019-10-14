@@ -3,9 +3,10 @@ layout: default
 title: Contact
 permalink: /contact
 ---
+<link rel="stylesheet" href="/assets/css/dataset.css">
 
 <div class="main-container">
-    <p class="email">
+    <h3 class="email">
         Email to <a href="mailto:videoturingtest@gmail.com">videoturingtest@gmail.com</a>
-    </p>
+    </h3>
 </div>
