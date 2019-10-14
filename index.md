@@ -19,7 +19,7 @@ title: DramaQA
     Updates
   </h1>
   <h2 class = "important-news-content">
-    DramaQA is released : <a id="download_link" src="/assets/dramaqa_download_agreement.docx">Download</a> dataset!
+    DramaQA is released : <a id="download_link" href="/assets/dramaqa_download_agreement.docx">Download</a> dataset!
   </h2>
   <p class="content-item">
     To download dramaQA dataset, you need to fill out this <a id="download_link" href="https://docs.google.com/forms/d/e/1FAIpQLSdqQTHp6-AiNQijHhcPAPvFV_6TFer06e6aWG1l_jRhRo2E5w/viewform">form</a> first. When you fill out the form, you need to submit dataset download agreement file in pdf format. After that, we will give you an ID for access by email.

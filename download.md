@@ -15,7 +15,9 @@ permalink: /dataset/download
         How to Download DramaQA Dataset
       </h2>
       <p class="content-item">
-        Before downloading dramaQA Dataset, you need to fill out this <a id="download_link" href="https://docs.google.com/forms/d/e/1FAIpQLSdqQTHp6-AiNQijHhcPAPvFV_6TFer06e6aWG1l_jRhRo2E5w/viewform">form</a> first. After filling out this form, we will give you an ID for access by email.
+        Before downloading dramaQA Dataset, you need to fill out this <a id="download_link" href="https://docs.google.com/forms/d/e/1FAIpQLSdqQTHp6-AiNQijHhcPAPvFV_6TFer06e6aWG1l_jRhRo2E5w/viewform">form</a> first. 
+        When you fill out the form, you need to submit <a id="download_link" href="/assets/dramaqa_download_agreement.docx">dataset download agreement file</a> in pdf format.
+        After filling out this form, we will give you an ID for access by email.
       </p>
   </div>
   <div class = "content-subcontainer">
