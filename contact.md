@@ -5,8 +5,8 @@ permalink: /contact
 ---
 <link rel="stylesheet" href="/assets/css/dataset.css">
 
-<div class="main-container">
-    <h3 class="email">
+<div class="download content-container">
+    <h5 class="content-title">
         Email to <a href="mailto:videoturingtest@gmail.com">videoturingtest@gmail.com</a>
-    </h3>
+    </h5>
 </div>
