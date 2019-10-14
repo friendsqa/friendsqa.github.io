@@ -50,11 +50,11 @@ title: DramaQA
   <p class="content-item">
    Video Question and Answering (VideoQA) is an emerging benchmark task to measure the levels of machine intelligence for video understanding. While several previous studies have suggested datasets for the VideoQA task, they did not consider story-level understanding, resulting in a lack of
    variance in the degree of question difficulty and coherent story-centric description.
-  </p>
-  <p class="content-item">
+   <br />
+   <br />
    DramaQA is a large-scale video QA dataset based on a Korean popular TV show, “Ohhaeyoung Again.” This dataset contains four levels of QA on difficulty and multi-level character-centered story descriptions.
-  </p>
-  <p class="content-item">
+   <br />
+   <br />
    We are expecting this challenge could be a starting point to evaluate hierarchical story understanding.
   </p>
   <h2 class = "content-subtitle">
@@ -62,21 +62,24 @@ title: DramaQA
   </h2>
   <p class="content-item">
    We briefly introduce two terms commonly used in video domain: Shot and Scene. A shot is formed by a series of continuous frames with consistent background setting, and a scene is a group of semantically related shots, which are coherent to certain subject or theme.
-  </p>
-  <p class="content-item">
+   <br />
+   <br />
    We collected the story descriptions for shot and scene level respectively and we limited that the descriptions should be focused on 19 main characters.
   </p>
   <h2 class = "content-subtitle">
     3. Multi-level Difficulty
   </h2>
   <p class="content-item">
-    Based on <a id="arxiv_link" href="https://arxiv.org/abs/1904.00623">arxiv link</a>, we defined four levels of difficulty for the question in terms of two criteria: length of video clip (Memory Capacity, MC) and the number of logical reasoning step (Logical complexity, LC).
-  </p>
-  <p class="content-item">
-    Lv 1: MC (shot), LC (single supporting fact).
-    Lv 2: MC (shot), LC (multiple supporting facts).
-    Lv 3: MC (scene), LC (multiple supporting facts w/ time).
-    Lv 4: MC (scene), LC (reason for causality).
+   Based on <a id="arxiv_link" href="https://arxiv.org/abs/1904.00623">arxiv link</a>, we defined four levels of difficulty for the question in terms of two criteria: length of video clip (Memory Capacity, MC) and the number of logical reasoning step (Logical complexity, LC).
+   <br />
+   <br />
+   Lv 1: MC (shot), LC (single supporting fact).
+   <br />
+   Lv 2: MC (shot), LC (multiple supporting facts).
+   <br />
+   Lv 3: MC (scene), LC (multiple supporting facts w/ time).
+   <br />
+   Lv 4: MC (scene), LC (reason for causality).
   </p>
   <h2 class = "content-subtitle">
     4. Dataset Specification
