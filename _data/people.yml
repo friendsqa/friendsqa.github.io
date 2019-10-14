@@ -1,7 +1,3 @@
-- name: Byungtak Zhang
-  affiliation: Professor
-  src: /assets/images/people/professor.jpg
-
 - name: Kyungwoon On
   affiliation: Student
   src: /assets/images/people/people_kwon.jpg
@@ -21,3 +17,7 @@
 - name: Ahjeong Seo
   affiliation: Student
   src: /assets/images/people/people_ajseo.jpg
+
+- name: Byungtak Zhang
+  affiliation: Professor
+  src: /assets/images/people/professor.jpg

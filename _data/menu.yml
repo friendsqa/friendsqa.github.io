@@ -23,11 +23,6 @@
   children :
     - name: 2019
       link: /
-- name: Workshop
-  child: true
-  children:
-  - name: 2019
-    link : /
 - name: Sponsor
   child: false
   link: /sponsor

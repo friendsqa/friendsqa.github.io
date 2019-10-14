@@ -54,8 +54,7 @@ title: DramaQA
     Paper
   </h1>
   <p class="content-item">
-  DramaQA: is a large-scale video QA dataset based on 6 popular <br>
-  <span id="authors">Seong-Ho Choi, Kyoung-Woon On, Byoung-Tak Zhang.</span>
+  To be Announced
   </p>
 </div>
 
