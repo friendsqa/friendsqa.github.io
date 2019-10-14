@@ -51,9 +51,7 @@ title: DramaQA
    Video Question and Answering (VideoQA) is an emerging benchmark task to measure the levels of machine intelligence for video understanding. While several previous studies have suggested datasets for the VideoQA task, they did not consider story-level understanding, resulting in a lack of
    variance in the degree of question difficulty and coherent story-centric description.
    <br />
-   <br />
    DramaQA is a large-scale video QA dataset based on a Korean popular TV show, “Ohhaeyoung Again.” This dataset contains four levels of QA on difficulty and multi-level character-centered story descriptions.
-   <br />
    <br />
    We are expecting this challenge could be a starting point to evaluate hierarchical story understanding.
   </p>
@@ -64,7 +62,6 @@ title: DramaQA
   <p class="content-item">
    We briefly introduce two terms commonly used in video domain: Shot and Scene. A shot is formed by a series of continuous frames with consistent background setting, and a scene is a group of semantically related shots, which are coherent to certain subject or theme.
    <br />
-   <br />
    We collected the story descriptions for shot and scene level respectively and we limited that the descriptions should be focused on 19 main characters.
   </p>
   <br />
@@ -73,7 +70,6 @@ title: DramaQA
   </h2>
   <p class="content-item">
    Based on <a id="arxiv_link" href="https://arxiv.org/abs/1904.00623">arxiv link</a>, we defined four levels of difficulty for the question in terms of two criteria: length of video clip (Memory Capacity, MC) and the number of logical reasoning step (Logical complexity, LC).
-   <br />
    <br />
    Lv 1: MC (shot), LC (single supporting fact).
    <br />
