@@ -52,6 +52,8 @@ title: DramaQA
    variance in the degree of question difficulty and coherent story-centric description.
    
    DramaQA is a large-scale video QA dataset based on a Korean popular TV show, “Ohhaeyoung Again.” This dataset contains four levels of QA on difficulty and multi-level character-centered story descriptions.
+   
+   We are expecting this challenge could be a starting point to evaluate hierarchical story understanding.
   </p>
   <h2 class = "content-subtitle">
     2. Multi-level Description
