@@ -15,7 +15,7 @@
   - name: Explore
     link: /dataset/explore
   - name: Download
-    link: /
+    link: /dataset/download
   - name: Code
     link: https://github.com/videoturingtest
 - name: Challenge
