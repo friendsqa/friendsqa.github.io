@@ -12,8 +12,6 @@
   children : 
   - name: Overview
     link: /dataset/overview
-  - name: Explore
-    link: /dataset/explore
   - name: Download
     link: /dataset/download
   - name: Code
@@ -22,7 +20,7 @@
   child: true
   children :
     - name: 2019
-      link: /
+      link: /challenge/2019
 - name: Sponsor
   child: false
   link: /sponsor

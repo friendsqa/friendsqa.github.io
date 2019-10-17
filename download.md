@@ -8,18 +8,12 @@ permalink: /dataset/download
 
 <div class="download content-container">
   <h1 class = "content-title">
-    Download DramaQA Dataset
+    DramaQA Dataset Download
   </h1>
-  <div class = "content-subcontainer">
-      <h2 class="content-subtitle">
-        How to Download DramaQA Dataset
-      </h2>
-      <p class="content-item">
-        Before downloading dramaQA Dataset, you need to fill out this <a id="download_link" href="https://docs.google.com/forms/d/e/1FAIpQLSdqQTHp6-AiNQijHhcPAPvFV_6TFer06e6aWG1l_jRhRo2E5w/viewform">form</a> first. 
-        When you fill out the form, you need to submit <a id="download_link" href="/assets/dramaqa_download_agreement.docx">dataset download agreement file</a> in pdf format.
-        After filling out this form, we will give you an ID for access by email.
-      </p>
-  </div>
+  <p class = "content-item">
+    To download DramaQA dataset, you need to fill out this <a id="download_link" href="https://docs.google.com/forms/d/e/1FAIpQLSdqQTHp6-AiNQijHhcPAPvFV_6TFer06e6aWG1l_jRhRo2E5w/viewform">form</a> first.
+    When you fill out the form, you need to <a id="download_link" href="/assets/dramaqa_download_agreement.docx">submit</a> dataset download agreement file in pdf format. After that, we will give you an ID for access by email.
+  </p>
   <div class = "content-subcontainer">
     <h2 class="content-subtitle">
       1. Annotation Format
